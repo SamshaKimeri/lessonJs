@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Les variables</title>
+</head>
+<body>
+    <h1>Les Variables</h1>
+    <p>En informatique, une variable est un conteneur qui stocke la donnée temporairement au sein de votre code. </p>
+    <p>Cela vous permet d’enregistrer des données.</p>
+    <p>Il existe des  types basiques :</p>
+    <p>- number : la donnée est un chiffre ;</p>
+    <p>- string : la donnée est une chaîne de caractères </p>
+    <p> (du texte, comme “David”, par exemple) ;</p>
+    <p>- boolean : la donnée est vraie ou fausse</p>
+
+    <h2>Utiliser des opérateurs</h2>
+    <p>Un opérateur est un symbole qui permet d’effectuer des actions sur des variables ou des valeurs</p>
+    <p>Ces actions peuvent être des opérations mathématiques, ou encore des comparaisons entre valeurs.</p>
+    
+    <h2>Les opérateurs d'affectation</h2>
+    <p>Lorsqu’on utilise  +=  , on additionne la valeur à droite du signe  =  à notre variable.</p>
+    <p>Les variantes pour les autres opérations mathématiques existent également.</p>
+    <p>On aura donc  -=  pour une soustraction,  *=  pour une multiplication,   /=  pour une division.</p>
+    
+    <h2>L'instruction Number</h2>
+    <p>nous pouvons soit enlever les guillemets autour des chiffres,</p>
+    <p>soit préciser à JavaScript que nous voulons vraiment utiliser des chiffres,</p>
+    <p>grâce à l’instruction Number</p>
+    <p>Cette dernière permet de convertir le texte “150” en chiffre 150.</p>
+    
+    <h2>Les Object en JS</h2>
+    <p>Un Object (objet, en français) JavaScript est un conteneur.</p>
+    <p>Il est composé de propriétés qui ont chacune une valeur</p>
+    <p> Ainsi, le type de donnée Object offre la possibilité de stocker plusieurs valeurs en une seule fois,</p>
+    <p>plutôt que de devoir stocker séparément nos valeurs dans plusieurs variables différentes.</p>
+    <p>Exemple :</p>
+    <p>Pour déclarer un objet en JavaScript, vous devez utiliser les accolades  { }  .</p>
+    <p>Les propriétés d’un objet ont un nom et une valeur qui sont assignées avec deux points:</p>
+    <p>Les propriétés sont séparées entre elles par des virgules,.</p>
+    <p>Par exemple :</p>
+    <p>let monPerso = { </p>
+    <p>nom : "Wayne",</p>
+    <p>prenom : "Bruce",</p>
+    <p>}</p>
+    <p>dans l'exemple nom et prenom sont des propriétes</p>
+    <p>et Wayne et Bruce sont des valeurs</p>
+
+    <h3>Ajouter une propriété à un object</h3>
+    <p>Un objet JavaScript peut être mis à jour au fur et à mesure de son évolution dans le code.</p>
+    <p>Par exemple, si vous vous rendez compte que l’objet monPerso a désormais un véhicule préféré</p>
+    <p>il vous faudra lui ajouter cette nouvelle propriété.</p>
+    <p>Pour ajouter une propriété, vous devez écrire le nom de votre objet,</p>
+    <p>séparé par un point  .  avec le nom de votre nouvelle propriété :</p>
+    <p>monPerso.vehiculePrefere = "Batmobile"</p>
+
+    <h3>Accédez à une propriété d’un objet JavaScript</h3>
+    <p>Lorsque vous manipulez des objets JavaScript,</p>
+    <p>vous avez également besoin d’accéder à leurs propriétés pour les stocker dans des variables,</p>
+    <p>et les utiliser dans la suite de votre code ou dans un autre contexte.</p>
+    <p>Vous pouvez accéder à la valeur d’une propriété en utilisant le point  .</p>
+    <p>const nomDeMonPersonnage = monPerso.nom</p>
+    <p>// Vérification</p>    
+    <p>console.log(nomDeMonPersonnage)</p>
+    <p>console.log(monPerso.nom)</p>
+
+    <h2>Regrouper des données grâce aux tableaux</h2>
+    <p>Un tableau en JavaScript est donc un objet qui permet de lister</p>
+    <p>plusieurs variables ou valeurs, et de les regrouper.</p>
+    <p>Pour accéder à un élément de votre tableau, </p>
+    <p>vous devez utiliser les crochets,</p>
+    <p>et mettre entre crochets le numéro de la case que vous voulez regarder. </p>
+    <p> La première case du tableau correspond à la case numéro zéro.</p>
+    <h4>Comptez le nombre d’éléments de votre tableau</h4>
+    <p>Pour connaître le nombre d’éléments que contient votre tableau,</p>
+    <p>vous devez accéder à la propriétélength, en utilisant le point  .  , comme pour les objets. </p>
+
+    <h3>Modifier des tableaux grace aux méthodes</h3>
+    <p>Les tableaux sont des conteneurs, comme les objets que nous avons vus dans le chapitre précédent.</p>
+    <p>Pour effectuer des actions sur les données stockées dans votre tableau</p>
+    <p>(ajouter, supprimer des données…), vous utiliserez des méthodes</p>
+    <p>Les méthodes s’utilisent avec des parenthèses  ( ) </p>
+    <p> À l’intérieur de ces parenthèses vous pouvez passer des valeurs,</p>
+    <p>c'est-à-dire des données, qui serviront à la méthode pour modifier les données de votre tableau.</p>
+    <h4>La méthode  .push()</h4>
+    <p>Pour ajouter des données à un tableau,</p>
+    <p>vous devez utiliser la méthode push en lui indiquant la valeur que vous souhaitez ajouter.</p>
+    <p>let mesFilms = ["Titanic", "Jurassic Park"] </p>
+    <p>mesFilms.push("Retour vers le futur")</p>
+    <p> console.log(mesFilms)</p>
+    <p>// mesFilms vaut ["Titanic", "Jurassic Park", "Retour vers le Futur"]</p>
+    <h4>La méthode  .pop() </h4>
+    <p>Pour supprimer la dernière donnée de votre tableau, </p>
+    <p>vous pouvez utiliser la méthode pop sans avoir besoin de passer de valeurs .</p>
+    <p>(c'est-à-dire, sans rien écrire entre les parenthèses)</p>
+    <p>Exemple :</p>
+    <p>let mesFilms = ["Titanic", "Jurassic Park", "Retour vers le futur"]</p>
+    <p>mesFilms.pop()</p>
+    <p>// mesFilms vaut ["Titanic", "Jurassic Park"]</p>
+    <h2>La copie d'une variable par VALEUR</h2>
+    <p>il arrive parfois que l’on veuille dupliquer une variable.</p>
+    <p>C’est le cas lorsque l’on doit sauvegarder une valeur avant de la modifier, par exemple.</p>
+    <p>le plus simple est de copier le contenu d’une variable à l’intérieur d’une autre variable.</p>
+    <p>Nous avons copié le contenu d’une variable à l’intérieur d’une autre variable.</p>
+    <p>Nous avons donc deux variables indépendantes.</p>
+    
+    <!-- <h4>Utiliser Object.assign() pour les objets</h4>
+    <p>crée une copie superficielle de l'objet en utilisant Object.assign(),</p>
+    <p>où les propriétés sont copiées dans un nouvel objet vide {}.</p>
+    <p>let objetOriginal = { a: 1, b: 2 };</p>
+    <p>let copieObjet = Object.assign({}, objetOriginal); // Copie par valeur</p>
+    <p>copieObjet.c = 3;</p>
+    <p>console.log(objetOriginal); // Affiche : { a: 1, b: 2 }</p>
+    <p>console.log(copieObjet); // Affiche : { a: 1, b: 2, c: 3 }</p> -->
+    <p></p>
+    <p></p>
+    <h2>La copie d'une variable par REFERENCE </h2>
+    <p>copier une variable qui contient un contenu de type “complexe” : </p>
+    <p> un objet ou un tableau, par exemple.</p>
+    <p>Dans ce cas, JavaScript fait une copie par référence</p>
+    <p>Exemple :</p>
+    <p>let variableComplexe1 = ['pomme', 'cerise']</p>
+    <p>let variableComplexe2 = variableComplexe1</p>
+    <p>variable1 et variable2 sont deux étiquettes différentes </p>
+    <p>c’est l’étiquette qui a été copiée.</p>
+    <h3>La copie d'un objet ou d'un tableau</h3>
+    <h4>Utiliser le spread operator (...) pour les tableaux ou les objets</h4>
+    <p>Le spread operator (...) crée une copie superficielle de l'objet ou du tableau</p>
+    <p> ce qui signifie qu'il copie les valeurs des propriétés ou des éléments,</p>
+    <p>mais s'il existe des objets imbriqués, ceux-ci ne seront pas copiés par valeur.</p>
+    <p>// Pour un tableau</p>
+    <p>let tableauOriginal = [1, 2, 3];</p>
+    <p>let copieTableau = [...tableauOriginal]; // Copie par valeur</p>
+    <p>copieTableau.push(4);</p>
+    <p>console.log(tableauOriginal); // Affiche : [1, 2, 3]</p>
+    <p>console.log(copieTableau); // Affiche : [1, 2, 3, 4]</p>
+    <p>// Pour un objet</p>
+    <p>let objetOriginal = { a: 1, b: 2 };</p>
+    <p>let copieObjet = { ...objetOriginal }; // Copie par valeur</p>
+    <p>copieObjet.c = 3;</p>
+    <p>console.log(objetOriginal); // Affiche : { a: 1, b: 2 }</p>
+    <p>console.log(copieObjet); // Affiche : { a: 1, b: 2, c: 3 }</p>
+    <p>Le spread operator (...) crée une copie superficielle de l'objet ou du tableau,</p>
+    <p>il copie les valeurs des propriétés ou des éléments,</p>
+    <p>mais s'il existe des objets imbriqués, ceux-ci ne seront pas copiés par valeur.</p>
+    <p></p>
+    <p></p>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript/8204629-declarez-une-variable#/id/r-8207226
+
+En informatique, une variable est un conteneur qui stocke la donnée temporairement au sein de votre code. 
+Cela vous permet d’enregistrer des données.
+
+Les instructions sont des mots-clés uniques qui permettent au code d’être correctement interprété. 
+Pour déclarer des variables, vous utiliserez les instructions let et const.
+
+Chaque variable possède un type. Cela permet à l’ordinateur d’attribuer le “tiroir” le plus approprié à chaque donnée.
+
+Il existe des  types basiques :
+- number : la donnée est un chiffre ;
+- string : la donnée est une chaîne de caractères (du texte, comme “David”, par exemple) ;
+- boolean : la donnée est vraie ou fausse.
