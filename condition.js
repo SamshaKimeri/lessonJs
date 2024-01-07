@@ -74,3 +74,38 @@ switch (jour) {
   default:
     console.log("Vous avez fait une erreur de frappe");
 }
+
+// for (let i = 10; i >= 0; i -= 2) {
+//   console.log(i);
+// }
+for (let i = 0; i <= 10; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+
+let fruit = "banane";
+switch (fruit) {
+  case "pomme":
+    console.log("les pommes sont rouges ou vertes");
+    break;
+  case "banane":
+    console.log("les bananes sont jaunes");
+    break;
+  default:
+    console.log("je ne connais pas cette couleur");
+    break;
+}
+
+let mois = 3;
+switch (mois) {
+  case 1:
+    console.log("janvier à 31 jour");
+    break;
+  case 2:
+    console.log("février à 28 ou 29 jours");
+    break;
+  default:
+    console.log("le mois est invalide");
+    break;
+}
