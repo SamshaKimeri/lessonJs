@@ -67,8 +67,47 @@
 //   }
 // }
 
-let nombres = [2, 10, 3, 11];
-for (let i = 0; i < nombres.length; i++) {
-  Math.max = nombres[i];
+// let nombres = [2, 4, 6, 3];
+// let plusGrand = nombres[0];
+// for (let i = 1; i < nombres.length; i++) {
+//   if (nombres[i] > plusGrand) {
+//     plusGrand = nombres[i];
+//   }
+// }
+// console.log(plusGrand);
+
+// let numeros = [4, 2, 6, 1];
+// let grand = numeros[0];
+// for (let i = 0; i < numeros.length; i++) {
+//   if (grand < numeros[i]) {
+//     grand = numeros[i];
+//   }
+// }
+// console.log(grand);
+
+// Calculer la moyenne des notes
+
+// let notes = [14, 10, 16, 8, 12]; // Tableau des notes des étudiants
+// let somme = 0; // Initialise la variable pour stocker la somme des notes
+
+// for (let i = 0; i < notes.length; i++) {
+//   somme += notes[i]; // Ajoute chaque note à la somme
+// }
+
+// let moyenne = somme / notes.length; // Calcule la moyenne en divisant la somme par le nombre de notes
+
+// console.log("La moyenne des notes est :", moyenne);
+
+// Afficher les nombres de 1 à 5 dans la console
+// for (let i = 1; i <= 5; i++) {
+//   console.log(i);
+// }
+
+// Afficher les nombres pair
+// for (let i = 0; i <= 10; i += 2) {
+//   console.log(i);
+// }
+
+for (let i = 10; i >= 1; i--) {
+  console.log(i);
 }
-console.log(nombres);
