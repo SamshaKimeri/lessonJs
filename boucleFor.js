@@ -221,3 +221,13 @@
 //   }
 // }
 // console.log(grand);
+
+// for (let i = 0; i < listeMots.length; i++) {
+//   let motUtilisateur = prompt("entrez le mot " + listeMots[i]);
+//   if (motUtilisateur === listeMots[i]) {
+//     score++;
+//   } else {
+//     console.log("nop");
+//   }
+// }
+// console.log(score);
