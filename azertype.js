@@ -27,34 +27,29 @@
 // }
 // console.log(score);
 
-const listePhrases = "phrases";
-const listeMots = "mots";
-let utilisateur = prompt(
-  "Entrez le mot : " + listeMots + " ou la phrase : " + listePhrases
-);
+const listeMots = ["ca", "pe", "se"];
+const listePhrases = ["pdp", "lv", "m"];
 
-while (utilisateur === listeMots || listePhrases) {
-  // utilisateur = prompt("écris");
-  console.log("vous avez choisi " + (listeMots || listePhrases));
+let score = 0;
+
+let choix = prompt("Veuillez choisir la liste : mots ou phrases");
+while (choix !== "mots" && choix !== "phrases") {
+  choix = prompt("écris : mots ou phrases");
 }
 
-if (utilisateur === listeMots) {
-  const listeMots = ["ca", "pe", "se"];
-  let score = 0;
+if (choix === "mots") {
   for (let i = 0; i < listeMots.length; i++) {
     let utilisateur = prompt("Entrez le mot : " + listeMots[i]);
     if (utilisateur === listeMots[i]) {
       score++;
     }
   }
-  console.log(score);
+  console.log("Votre score est de : " + score + " sur " + listeMots.length);
 } else {
-  const listePhrases = ["pdp", "lv", "m"];
-  let score = 0;
   for (let i = 0; i < listePhrases.length; i++) {
     let utilisateur = prompt("Entrez la bonne phrase : " + listePhrases[i]);
     if (utilisateur === listePhrases[i]);
     score++;
   }
+  console.log("Votre score est de : " + score + " sur " + listePhrases.length);
 }
-console.log(score);

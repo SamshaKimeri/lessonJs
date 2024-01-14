@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="fonction.js"></script>
+    <title>Les fonctions</title>
+</head>
+<body>
+    <h1>Les fonctions</h1>
+    <p>Une fonction est un bloc de code auquel on attribue un nom.</p>
+    <p>Appeler cette fonction permet d’exécuter le code qu’elle contient.</p>
+    <p>On parle donc de fonction, car il s’agit d’un bloc de code qui a un</p>
+    <p>rôle spécifique au sein de votre fichier JavaScript. Une fonction</p>
+    <p>peut ainsi : </p>
+    <p>- contenir des informations, qu’on appelle paramètres ;</p>
+    <p>- retourner un résultat ;</p>
+    <p>- effectuer une action.</p>
+    <br>
+    <p>Exemple :</p>
+    <p>function retournerMessageScore(score, nombreQuestions) {
+        let message = 'Votre score est de ' + score + ' sur ' + nombreQuestions
+        return message}</p>
+    <p>- le mot-clé function (“fonction”, en anglais) est suivi du nom</p>
+    <p>“retournerMessageScore”. Ce mot est ici obligatoire pour définir</p>
+    <p>la fonction, mais il n’est ensuite plus nécessaire lorsqu’on l’utilise ;</p>
+    <p>- par conséquent, la fonction “retournerMessageScore” est créée ;</p>
+    <p>- entre parenthèses sont indiqués les paramètres envoyés à cette</p>
+    <p>fonction : “score” et “nombreQuestions” ;</p>
+    <p>- entre accolades est indiqué le bloc de code qui sera exécuté</p>
+    <p>quand la fonction sera appelée (let message… et return) ;</p>
+    <p>- dans ce bloc de code, nous déclarons une variable message</p>
+    <p>dans laquelle nous créons notre message ;</p>
+    <p>- le code est finalisé avec le nouveau mot-clé "return".</p>
+    <p>Ce mot signifie que la fonction va retourner le contenu de message.</p>
+    <h3>Définissez une tâche spécifique pour chaque fonction</h3>
+    <p>On attribue une seule tâche à une fonction :  </p>
+    <p>afficher, calculer, lancer une opération, initialiser…</p>
+    <p>Si une fonction s’occupe de tout gérer à la fois, elle comportera beaucoup de lignes, </p>
+    <p>difficiles à comprendre, à modifier et à tester.</p>
+    <h3>Écrivez des fonctions courtes</h3>
+    <p>vos fonctions ne doivent pas dépasser 30 lignes. Si le but de la fonction est clair,</p>
+    <p> un code court est généralement suffisant pour l’atteindre.</p>
+    <p>Si la fonction prend trop d’ampleur, c’est peut-être qu’elle est mal conçue, </p>
+    <p>qu’elle fait trop de choses, ou qu’il faudrait la découper en plusieurs sous-fonctions.</p>
+    <h3>Nommez clairement les fonctions</h3>
+    <p>Comme pour les variables, le nom d’une fonction devrait être suffisamment clair </p>
+    <p>pour permettre d’en deviner le contenu sans lire le code qu’elle contient.</p>
+    <p>Par Exemple :</p>
+    <p>Vous pouvez utiliser un verbe pour nommer votre function</p>
+    <p>displayResult : afficherResultat</p>
+    <p>calculateResult : calculerResultat</p>
+    <p>resetResult : reinitialiserResultat</p>
+    <h3>Nommez clairement les paramètres</h3>
+    <p>Par exemple</p>
+    <p>lancerJeu(listeMots) {
+        // code
+    }</p>
+    <p>le paramètre contient  un tableau avec une liste de mots. </p>
+    <h3>Organisez votre code en plusieurs fichiers</h3>
+    <p>Découper votre code en plusieurs fonctions permet </p>
+    <p>de mieux organiser vos idées et facilite les modifications</p>
+    <h3>La portée des variables</h3>
+    <p>Les variables ont une portée, qui est définie par l’endroit </p>
+    <p> où cette variable est déclarée. Ainsi, on distingue deux types de variables : </p>
+    <p>- les variables globales : visibles et utilisables dans l’ensemble du code ;</p>
+    <p>- les variables locales : qui ne peuvent être utilisées qu’au sein du bloc de code dans lequel elles sont définies.</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+</body>
+</html>
