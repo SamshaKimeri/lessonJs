@@ -25,13 +25,13 @@
 // console.log(resultatMoyenne);
 // console.log("caca " + calculerMoyenne(1, 10, 10));
 
-// Aire
-function aireRectangle(longueur, largeur) {
-  let calculAire = longueur * largeur;
-  return calculAire;
-}
-let besoinAireRectangle = aireRectangle(2, 10);
-console.log(besoinAireRectangle);
+// Aire d'un rectangle
+// function aireRectangle(longueur, largeur) {
+//   let calculAire = longueur * largeur;
+//   return calculAire;
+// }
+// let besoinAireRectangle = aireRectangle(2, 10);
+// console.log(besoinAireRectangle);
 
 // function retourneMessageScore(score, nombreQuestions) {
 //   let message = `Votre score est de  ${score} sur ${nombreQuestions}`;
@@ -63,6 +63,51 @@ console.log(besoinAireRectangle);
 // console.log(monNombre); // monNombre est accessible
 // console.log(monNombreLocal); //  monNombreLocal est inaccessible
 
-function convertirCelsus(celsus) {
-  let convertirTemperature = 9 / 5 + 32;
+// Convertir celsus en fahrenheit
+// function convertirCelsus(celsus) {
+//   let convertirTemperature = (celsus * 9) / 5 + 32;
+//   console.log(
+//     `${celsus} degrés celsus correspondant à ${convertirTemperature}`
+//   );
+//   return convertirTemperature;
+// }
+// let temperatureFarenit = convertirCelsus(10);
+
+// calculer la somme des carrés de a et b
+// function sommeDesCarres(a, b) {
+//   somme = a ** 2 + b ** 2;
+//   console.log(`La somme des carrés de ${a} et de ${b} est égal à ${somme}`);
+// }
+// let totalCarres = sommeDesCarres(4, 6);
+
+// Afficher si nombre est pair ou impair
+// function verifierParite(nombre) {
+//   if (nombre % 2 === 0) {
+//     console.log(`${nombre} est pair`);
+//   } else {
+//     console.log(`${nombre} est impair`);
+//   }
+// }
+// let pairOuImpair = verifierParite(10);
+
+// Calculer la puissance
+// function calculerPuissance(base, exposant) {
+//   let puissance = Math.pow(base, exposant);
+//   console.log(
+//     `${base} élevé à la puissance ${exposant} est égal à : ${puissance}`
+//   );
+// }
+// calculerPuissance(3, 7);
+
+function calculerMoyenne(nombre1, nombre2, nombre3) {
+  let moyenne = (nombre1 + nombre2 + nombre3) / 3;
+  console.log(
+    `La moyenne de ${nombre1} , ${nombre2} et  ${nombre3} est ${moyenne}`
+  );
+  console.log(
+    `La moyenne de ${nombre1} , ${nombre2} et  ${nombre3} est ${parseInt(
+      moyenne
+    )}`
+  );
 }
+calculerMoyenne(6, 2, 3);
