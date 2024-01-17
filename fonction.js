@@ -99,15 +99,113 @@
 // }
 // calculerPuissance(3, 7);
 
-function calculerMoyenne(nombre1, nombre2, nombre3) {
-  let moyenne = (nombre1 + nombre2 + nombre3) / 3;
-  console.log(
-    `La moyenne de ${nombre1} , ${nombre2} et  ${nombre3} est ${moyenne}`
-  );
-  console.log(
-    `La moyenne de ${nombre1} , ${nombre2} et  ${nombre3} est ${parseInt(
-      moyenne
-    )}`
-  );
-}
-calculerMoyenne(6, 2, 3);
+// Calculer la moyenne
+// function calculerMoyenne(nombre1, nombre2, nombre3) {
+//   let moyenne = (nombre1 + nombre2 + nombre3) / 3;
+//   console.log(
+//     `La moyenne de ${nombre1} , ${nombre2} et  ${nombre3} est ${moyenne}`
+//   );
+//   console.log(
+//     `La moyenne de ${nombre1} , ${nombre2} et  ${nombre3} est ${parseInt(
+//       moyenne
+//     )}`
+//   );
+// }
+// calculerMoyenne(6, 2, 3);
+
+// l'utilisateur est en ligne
+// let online = true;
+// let message = "";
+
+// if (online) {
+//   message = "Utilisateur en ligne !";
+// } else {
+//   message = "Utilisateur hors ligne !";
+// }
+// console.log(message);
+
+// Pour autorisé l'acces
+// let motDePasse = "Multipass";
+// let message = "";
+
+// if (motDePasse !== "Multipass") {
+//   message = "Accès non autorisé";
+// } else {
+//   message = "Accès autorisé";
+// }
+// console.log(message);
+
+// let monNombre = 1;
+// monNombre est une variable globale, car elle est
+// déclarée en dehors d'un bloc de code
+// function afficheUnNombre() {
+//   let monNombreLocal = 2;
+// monNombreLocal est une variable locale, car elle
+// est déclarée uniquement au sein d'une fonction
+//   console.log("Interieur de la fonction : ");
+//   console.log(monNombre); // monNombre est accessible
+//   console.log(monNombreLocal); // monNombreLocal est accessible
+// }
+// afficheUnNombre();
+// console.log("Extérieur de la fontion :");
+// console.log(monNombre); // monNombre est accessible
+// console.log(monNombreLocal); // monNombreLocal n'est pas accessible
+
+// !!!!!!! function et FOR !!!!
+// Calculer la somme des chiffres en convertissant
+// le nombre en chaine de caractère
+// function calculerSommeChiffres(nombre) {
+//     Convertir le nombre en chaine de caractères
+//   let chiffres = nombre.toString();
+// Initialiser la somme
+//   let somme = 0;
+//   for (let i = 0; i < chiffres.length; i++) {
+//     somme += parseInt(chiffres[i]);
+//   }
+//   Affichage de la somme
+//   console.log(nombre + " " + somme);
+// }
+// Appel de la fonction avec une valeur
+// calculerSommeChiffres(143);
+
+// Créer une table de multiplication avec tableau
+// function afficheTableMultiplication(nombre) {
+//   let tableMultiplication = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//   for (let i = 0; i < tableMultiplication.length; i++) {
+//     tableMultiplication[i] *= nombre;
+//   }
+//   console.log(tableMultiplication);
+// }
+// afficheTableMultiplication(5);
+
+// Autre possiblité pour créer une table de multiplication
+// / Déclaration de la fonction
+// function afficherTableMultiplication(nombre) {
+//   console.log("Table de multiplication de " + nombre + ":");
+// Initialisation du tableau pour stocker les résultats
+//   let resultatMultiplications = [];
+// Boucle pour itérer de 1 à 10
+//   for (let i = 1; i <= 10; i++) {
+// Calcul de la multiplication et ajout au tableau
+// resultatMultiplications.push(nombre * i);
+//   }
+// Affichage du tableau de résultats
+//   for (let i = 1; i <= 10; i++) {
+// console.log(nombre + " x " + i + " = " + resultatMultiplications[i - 1]);
+//   }
+// }
+// Appel de la fonction avec une valeur
+// afficherTableMultiplication(5);
+
+// Créer une table de muliplication
+// Declarer la fonction
+// function afficheTableMultiplication(nombre) {
+//   console.log(`table de multiplication de ${nombre} : `);
+//  boucle pour itérer de 1 à 10
+//   for (let i = 0; i <= 10; i++) {
+// Affichage de la multiplication
+// console.log(`${nombre}  *  ${i}  =  ${nombre * i}`);
+//   }
+// }
+// Appel de la fonction avec une valeur
+// afficheTableMultiplication(5);

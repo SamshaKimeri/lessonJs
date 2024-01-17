@@ -11,6 +11,12 @@
 //   i++;
 // }
 
+let compteur = 0;
+while (compteur < 5) {
+  compteur++;
+}
+console.log(compteur);
+
 // Ecris ok
 // tant que tu n'ecris pas ok
 // la boucle continue
@@ -103,8 +109,8 @@
 //   console.log(i);
 // }
 
-let i = 0;
-while (i < 10) {
-  i++;
-  console.log(i);
-}
+// let i = 0;
+// while (i < 10) {
+//   i++;
+//   console.log(i);
+// }

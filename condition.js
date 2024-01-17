@@ -109,3 +109,20 @@ switch (mois) {
     console.log("le mois est invalide");
     break;
 }
+
+// Quelle est la meilleure actrice?
+// let meilleurFilm = "Black Swan";
+// let meilleureActrice = "";
+
+// switch (meilleurFilm) {
+//   case "La Môme":
+//     meilleureActrice = "Marion Cotillard";
+//     break;
+//   case "Mama Mia":
+//     meilleureActrice = "Meryl Streep";
+//     break;
+//   case "Black Swan":
+//     meilleureActrice = "Natalie Portman";
+//     break;
+// }
+// console.log(meilleureActrice);
