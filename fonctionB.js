@@ -1,14 +1,93 @@
+// Additionner 2 nombres utilisation de return
+// function additionner(nombre1, nombre2) {
+//   let somme = nombre1 + nombre2;
+//   return somme;
+// }
+// let calculSomme = additionner(10, 20);
+// console.log(calculSomme);
+
+// Trouver le carré d'un nombre
+// function carre(nombre) {
+//   let carreNombre = nombre * nombre;
+//   return carreNombre;
+// }
+// let nombreAuCarre = carre(10);
+// console.log(nombreAuCarre);
+
+// Concaténer des prénoms
+// function concatenerPrenoms(prenom1, prenom2) {
+//   let chaine = prenom1 + "et" + prenom2 + "sont amis.";
+//   return chaine;
+// }
+// let prenomChaine = concatenerPrenoms(" alphonse ", " daudet ");
+// console.log(prenomChaine);
+
+// Vérifier si une persone est majeur ou si elle n'est pas majeur
+// avec IF et TRUE et FALSE
+// function estMajeur(age) {
+//   if (age >= 18) {
+// return true;
+//   } else {
+// return false;
+//   }
+// }
+// let agePersonne1 = estMajeur(22);
+// console.log("La personne est majeure : " + agePersonne1);
+// let agePersonne2 = estMajeur(15);
+// console.log("La personne est majeure : " + agePersonne2);
+
+// Calculer la moyenne
+// function calculerMoyenne(note1, note2, note3) {
+//   let moyenne = (note1 + note2 + note3) / 3;
+//   return moyenne;
+// }
+// let noteMoyenne = calculerMoyenne(10, 10, 10);
+// console.log(noteMoyenne);
+
 // function calculMoyenne(note1, note2, note3) {
 //   let moyenne = (note1 + note2 + note3) / 3;
 //   console.log(moyenne);
 // }
 // calculMoyenne(10, 2, 2);
 
+// function convertirCelsiusEnFahrenheit(celsus) {
+//   let fahrenheit = (celsus * 9) / 5 + 32;
+//   return fahrenheit;
+// }
+// let temperatureFahrenheit = convertirCelsiusEnFahrenheit(10);
+// console.log(temperatureFahrenheit);
+
 // function convertirCelsusEnFahreneit(temperatureCelsus) {
 //   let temperatureFahrenheit = (9 * temperatureCelsus) / 5 + 32;
 //   console.log(temperatureFahrenheit);
 // }
 // convertirCelsusEnFahreneit(10);
+
+// Trouver le nombre le plus grand
+// function trouverPlusGrand(nombre1, nombre2) {
+//   if (nombre1 > nombre2) {
+// return nombre1;
+//   } else {
+// return nombre2;
+//   }
+// }
+// let nombreGand1 = trouverPlusGrand(30, 20);
+// console.log(nombreGand1);
+// let nombreGand = trouverPlusGrand(10, 20);
+// console.log(nombreGand);
+
+// function estPalindrome(mot) {
+//   let inverseMot = mot.split("").reverse().join("");
+//   console.log(inverseMot);
+//   if (mot === inverseMot) {
+// console.log("true");
+//   } else {
+// console.log("false");
+//   }
+// }
+//
+// estPalindrome("ishka");
+// estPalindrome("radar");
 
 // function vrifieParité(nombre) {
 //   if (nombre % 2 === 0) {
@@ -131,11 +210,29 @@
 // }
 // inverserchaine("ishka");
 
+// function estPalindrome(chaine) {
+// Convertir la chaîne en minuscules pour une comparaison insensible à la casse
+//   chaine = chaine.toLowerCase();
+// Parcourir la moitié de la chaîne
+//   for (let i = 0; i < Math.floor(chaine.length / 2); i++) {
+// Comparer le caractère actuel avec son homologue du côté opposé de la chaîne
+// if (chaine[i] !== chaine[chaine.length - 1 - i]) {
+// Si les caractères ne correspondent pas, la chaîne n'est pas un palindrome
+//   return false;
+// }
+//   }
+// Si aucune différence n'est trouvée, la chaîne est un palindrome
+//   return true;
+// }
+// Exemples d'utilisation
+// console.log(estPalindrome("radar")); // Affichera true
+// console.log(estPalindrome("hello")); // Affichera false
+// console.log(estPalindrome("level")); // Affichera true
+
 // Utilisation de reverse() pour inverser une chaîne
 // function inverserChaineAvecReverse(chaine) {
 // Convertir la chaîne en tableau, inverser, puis reconvertir en chaîne
 // let chaineInverse = chaine.split('').reverse().join('');
-
 // Affichage de la chaîne inversée dans la console
 // console.log("Chaîne inversée : " + chaineInverse);
 // }
@@ -143,7 +240,7 @@
 // inverserChaineAvecReverse("Bonjour"); // Affichera "Chaîne inversée : ruojnoB"
 // inverserChaineAvecReverse("JavaScript"); // Affichera "Chaîne inversée : tpircSavaJ"
 // inverserChaineAvecReverse("12345"); // Affichera "Chaîne inversée : 54321"
-
+//
 // function estPalindrme(mot) {
 //   let inverseMot = mot.split("").reverse().join("");
 //   console.log(inverseMot);
@@ -153,7 +250,6 @@
 //     console.log("pasok");
 //   }
 // }
-
 // estPalindrme("ishka");
 // estPalindrme("radar");
 
@@ -185,23 +281,56 @@
 // plusLong = motCourant;
 // }
 // }
-
 // Afficher le résultat dans la console
 // console.log("Le plus long mot dans la phrase est : " + plusLong);
 // }
-
 // Utilisation de la fonction avec différentes phrases
 // plusLongMot("Bonjour, comment ça va ?"); // Affichera "Le plus long mot dans la phrase est : Bonjour"
 // plusLongMot("JavaScript est un langage de programmation"); // Affichera "Le plus long mot dans la phrase est : programmation"
 // plusLongMot("Ceci est une phrase."); // Affichera "Le plus long mot dans la phrase est : phrase"
 
-let chaine = "   C'est une phrase avec des espaces blancs.   ";
-let chaineSansEspaces = chaine.trim();
-console.log(chaineSansEspaces);
-// Résultat : "C'est une phrase avec des espaces blancs."
+// Remplacer des lettres avec REPLACE ET NEWREG (VOIR leçon à index.html)
+// Déclaration de la fonction
+// function remplacerLettres(chaine, lettre1, lettre2) {
+// Utiliser replace pour remplacer toutes les occurrences de lettre1 par lettre2
+//   let nouvelleChaine = chaine.replace(new RegExp(lettre1, "g"), lettre2);
+// Afficher le résultat dans la console
+//   console.log("Nouvelle chaîne : " + nouvelleChaine);
+// }
+// Utilisation de la fonction avec différentes chaînes et lettres
+// remplacerLettres("Bonjour, monde !", "o", "X"); // Affichera "Nouvelle chaîne : BXnjour, mXnde !"
+// remplacerLettres("JavaScript est super", "e", "Y"); // Affichera "Nouvelle chaîne : JavaScript est supYr"
+// remplacerLettres("Mississippi", "i", "Z"); // Affichera "Nouvelle chaîne : MZssZssZppZ"
+// remplacerLettres("toto fait popo", "o", "i");
 
-// Validation d'une adresse e-mail (supprimer les espaces avant et après)
-let email = "   utilisateur@example.com   ";
-let emailValide = email.trim();
-console.log(emailValide);
-// Résultat : "utilisateur@example.com"
+// Remplacer les caratères spéciaux avec REPLACE
+// VOIR LECON à index.html pour les REGEXP
+// Déclaration de la fonction
+// function encoderCaracteresSpeciaux(chaine) {
+// Remplacer les espaces grace à / / par le caractère underscore
+//   let nouvelleChaine = chaine.replace(/ /g, "_");
+// Remplacer les accents aigus par la lettre "e"
+//   nouvelleChaine = nouvelleChaine.replace(new RegExp("[éèê]", "g"), "e");
+// Remplacer les caractères non alphabétiques par une chaîne vide
+//   nouvelleChaine = nouvelleChaine.replace(new RegExp("[^a-zA-Z]", "g"), "");
+// Afficher le résultat dans la console
+//   console.log("Nouvelle chaîne : " + nouvelleChaine);
+// }
+// Utilisation de la fonction avec différentes chaînes
+// encoderCaracteresSpeciaux("Bonjour, comment ça va ?"); // Affichera "Nouvelle chaîne : Bonjour_comment_ca_va"
+// encoderCaracteresSpeciaux("C'est l'été!"); // Affichera "Nouvelle chaîne : Cestlete"
+// encoderCaracteresSpeciaux("123 $%^&*"); // Affichera "Nouvelle chaîne : "
+
+// Utilisation simple de CHARAT
+// function compterVoyelles(chaine) {
+// for (let i = 0; i < chaine.length; i++) {
+// console.log(chaine.charAt(i));
+// }
+// }
+// compterVoyelles("palipolu");
+
+// utilisation simple de MATCH
+// let texte = "Hello World!";
+// let correspondances = texte.match(/[a-z]/gi);
+// console.log(correspondances);
+// Résultat : ['H', 'e', 'l', 'l', 'o', 'o', 'r', 'l', 'd']

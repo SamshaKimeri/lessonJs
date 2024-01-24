@@ -33,6 +33,16 @@
 // let besoinAireRectangle = aireRectangle(2, 10);
 // console.log(besoinAireRectangle);
 
+// Calculer la surface d'un rectangle
+// function calculerSurfaceRectangle(longueur, largeur) {
+// let surface = longueur * largeur;
+// return surface;
+//   }
+//   let surface1 = calculerSurfaceRectangle(5, 8);
+//   console.log(surface1);
+//   let surface2 = calculerSurfaceRectangle(10, 3);
+//   console.log(surface2);
+
 // function retourneMessageScore(score, nombreQuestions) {
 //   let message = `Votre score est de  ${score} sur ${nombreQuestions}`;
 //   return message;
@@ -48,12 +58,12 @@
 // console.log(retourFonction);
 
 // let monNombre = 1;
-// // monNombre ert une variableglobale,
-// // elle est déclarée en dehors du bloc de code
+// monNombre ert une variableglobale,
+// elle est déclarée en dehors du bloc de code
 // function afficheUnNombre() {
 //   let monNombreLocal = 2;
-//   // monNombreLocal et une variable locale,
-//   // elle est déclarée uniquement DANS une function
+// monNombreLocal et une variable locale,
+// elle est déclarée uniquement DANS une function
 //   console.log("Interieur de la fonction : ");
 //   console.log(monNombre); // monNombre est accessible
 //   console.log(monNombreLocal); //  monNombreLocal est accessible
@@ -72,6 +82,49 @@
 //   return convertirTemperature;
 // }
 // let temperatureFarenit = convertirCelsus(10);
+
+// Convertir des celsus en fahrenheit
+// function convertirCelsusEnFahreneit(celsus) {
+//   let temperatureCelsus = (celsus * 9) / 5 + 32;
+//   return temperatureCelsus;
+// }
+// let celsus1 = convertirCelsusEnFahreneit(10);
+// console.log(celsus1);
+
+// Autre facon de celsus en fahrenheit
+// Déclaration de la fonction
+// function convertirCelsiusEnFahrenheit(tempCelsius) {
+// Conversion de Celsius en Fahrenheit
+//   let tempFahrenheit = (tempCelsius * 9) / 5 + 32;
+// Retourner la température convertie en Fahrenheit
+//   return tempFahrenheit;
+// }
+// Appel de la fonction avec différentes valeurs
+// let temp1Celsius = 25;
+// let temp1Fahrenheit = convertirCelsiusEnFahrenheit(temp1Celsius);
+// console.log(
+//   temp1Celsius +
+//     " degrés Celsius équivalent à " +
+//     temp1Fahrenheit +
+//     " degrés Fahrenheit."
+// );
+
+// let temp2Celsius = 0;
+// let temp2Fahrenheit = convertirCelsiusEnFahrenheit(temp2Celsius);
+// console.log(
+//   temp2Celsius +
+//     " degrés Celsius équivalent à " +
+//     temp2Fahrenheit +
+//     " degrés Fahrenheit."
+// );
+// let temp3Celsius = -10;
+// let temp3Fahrenheit = convertirCelsiusEnFahrenheit(temp3Celsius);
+// console.log(
+//   temp3Celsius +
+//     " degrés Celsius équivalent à " +
+//     temp3Fahrenheit +
+//     " degrés Fahrenheit."
+// );
 
 // calculer la somme des carrés de a et b
 // function sommeDesCarres(a, b) {

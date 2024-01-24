@@ -230,3 +230,15 @@ console.log(myMusic);
 // copieMyMusic.pop();
 // console.log(myMusic);
 // console.log(copieMyMusic);
+
+// Utiliser la méthode TRIM
+let chaine = "   C'est une phrase avec des espaces blancs.   ";
+let chaineSansEspaces = chaine.trim();
+console.log(chaineSansEspaces);
+// Résultat : "C'est une phrase avec des espaces blancs."
+
+// Validation d'une adresse e-mail (supprimer les espaces avant et après)
+let email = "   utilisateur@example.com   ";
+let emailValide = email.trim();
+console.log(emailValide);
+// Résultat : "utilisateur@example.com"

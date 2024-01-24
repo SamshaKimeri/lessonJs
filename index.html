@@ -145,6 +145,57 @@
     <p>Le spread operator (...) crée une copie superficielle de l'objet ou du tableau,</p>
     <p>il copie les valeurs des propriétés ou des éléments,</p>
     <p>mais s'il existe des objets imbriqués, ceux-ci ne seront pas copiés par valeur.</p>
+
+    <h3>Les expressions régulières</h3>
+    <p>\d : Cela représente un chiffre. En termes simples, il correspond à n'importe quel </p>
+    <p>caractère numérique de 0 à 9.</p>
+    <p>+ : Cela indique que le chiffre (représenté par \d) doit apparaître une ou plusieurs fois. </p>
+    <p>Cela signifie que la séquence de chiffres doit être continue.</p>
+    <p>/g : C'est un modificateur global qui signifie "global". Il indique à l'expression régulière </p>
+    <p>de rechercher toutes les occurrences de la correspondance dans la chaîne, pas seulement </p>
+    <p>la première.</p>
+    <p>Exemple :</p>
+    <p>let chaine = "abc123def456"; <br>
+        let nouvelleChaine = chaine.replace(/\d+/g, "X");<br>
+        console.log(nouvelleChaine);<br>
+         Résultat : "abcXdefX"</p>
+    <p>Dans cet exemple, les séquences de chiffres "123" et "456" </p>
+    <p>sont remplacées par la lettre "X", </p>
+    <p>produisant la chaîne résultante "abcXdefX".</p>
+    <h4>Autres expressions régulières</h4>
+    <p>[a-zA-Z] : Cela correspond à n'importe quelle lettre majuscule ou minuscule de l'alphabet </p>
+    <p>anglais. L'utilisation de a-z indique les lettres minuscules et A-Z indique les lettres </p>
+    <p>majuscules.</p>
+    <p>[^a-zA-Z] : En ajoutant ^ au début de l'ensemble, cela inverse la correspondance. </p>
+    <p>Donc, cela signifie tout caractère qui n'est pas une lettre majuscule ou minuscule </p>
+    <p>de l'alphabet anglais.</p>
+    <p>Exemple :</p>
+    <p>let chaine = "Hello 123 World!";<br>
+        let nouvelleChaine = chaine.replace(new RegExp("[^a-zA-Z]", 'g'), "");<br>
+        
+        console.log(nouvelleChaine);<br>
+        // Résultat : "HelloWorld"</p>
+    <h4>Autres expressions régulières</h4>
+    <p>/ /g est utilisée pour rechercher tous les espaces dans une chaîne de caractères.</p>
+    <p>/ / : Cela représente un espace simple. Dans une expression régulière,</p>
+    <p>les caractères spéciaux comme l'espace peuvent être inclus </p>
+    <p>directement s'ils ne nécessitent pas d'échappement.</p>
+    <p>/ /g : L'ajout du modificateur global g à la fin de l'expression régulière </p>
+    <p> indique une recherche globale. </p>
+    <p>Cela signifie que l'expression régulière va rechercher toutes les occurrences</p>
+    <p>de l'espace dans la chaîne, pas seulement la première occurrence.</p>
+    <p>let chaine = "Bonjour le monde !"; <br>
+        let nouvelleChaine = chaine.replace(/ /g, "_");<br>
+        console.log(nouvelleChaine);<br>
+        // Résultat : "Bonjour_le_monde_!"</p>
+    <p></p>
+    
+
+    <p>Exemple :</p>
+    <p>Utiliser REPLACE pour remplacer toutes les occurrences de lettre1 par lettre2 <br>
+        let nouvelleChaine = chaine.replace(new RegExp(lettre1, "g"), lettre2);
+      </p>
+    <p></p>
     <p></p>
     <p></p>
     <p></p>
