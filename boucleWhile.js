@@ -11,11 +11,11 @@
 //   i++;
 // }
 
-let compteur = 0;
-while (compteur < 5) {
-  compteur++;
-}
-console.log(compteur);
+// let compteur = 0;
+// while (compteur < 5) {
+//   compteur++;
+// }
+// console.log(compteur);
 
 // Ecris ok
 // tant que tu n'ecris pas ok
@@ -69,6 +69,20 @@ console.log(compteur);
 //   console.log("Le double de " + nombre / 2 + " est : " + nombre);
 // }
 
+// L'utilisateur entre un nombre
+// Multiplier ce nombre par 2
+// Demander à l'utilisateur d'entrer un nombre entier
+// let nombre = parseInt(prompt("Entrez un nombre entier :"));
+// Utiliser la boucle while pour multiplier le nombre par 2 jusqu'à ce qu'il atteigne ou dépasse 100
+// while (nombre < 100) {
+// Afficher le résultat à chaque itération
+// console.log(nombre);
+// Multiplier le nombre par 2
+// nombre *= 2;
+// }
+// Afficher le résultat final
+// console.log(nombre);
+
 // Demander à l'utilisateur d'entrer un nombre
 // Calculer la factorielle de ce nombre
 // let nombre = parseInt(prompt("Entrez un nombre entier positif :"));
@@ -114,3 +128,45 @@ console.log(compteur);
 //   i++;
 //   console.log(i);
 // }
+
+// let nombreTermes = 10;
+// let termeCourant = 0;
+// let termeSuivant = 1;
+// let compteur = 0;
+
+// console.log("Séquence de Fibonacci :");
+
+// while (compteur < nombreTermes) {
+//   console.log(termeCourant);
+
+//   let temp = termeCourant + termeSuivant;
+//   termeCourant = termeSuivant;
+//   termeSuivant = temp;
+
+//   compteur++;
+// }
+
+// Demander à l'utilisateur de rentrer un nombre
+// Calculer la somme de tous les nombre pairs
+// let nombreSaisi = parseInt(prompt("Entrez un nombre entier positif :"));
+// let somme = 0; // Initialiser la variable somme à 0
+// let compteur = 1; // Initialiser le compteur à 1
+// Utiliser une boucle while pour itérer à travers les nombres de 1 jusqu'au nombre saisi
+// while (compteur <= nombreSaisi) {
+// Vérifier si le nombre actuel est pair en utilisant l'opérateur modulo (%)
+// if (nombreSaisi % 2 === 0) {
+// Si le nombre est pair, l'ajouter à la somme
+// somme += compteur;
+// }
+// compteur++; // Passer au nombre suivant
+// }
+// console.log(`La somme des nombres pairs jusqu'à ${nombreSaisi} est : ${somme}`);
+
+let nombre = parseInt(prompt("Entrez un nombre entier positif"));
+let somme = 0;
+let compteur = 1;
+while (compteur <= nombre) {
+  somme += compteur;
+  compteur++;
+}
+console.log(`La somme des nombres de 1 à ${nombre} est : ${somme}`);
