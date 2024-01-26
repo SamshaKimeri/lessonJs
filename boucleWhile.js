@@ -133,16 +133,12 @@
 // let termeCourant = 0;
 // let termeSuivant = 1;
 // let compteur = 0;
-
 // console.log("Séquence de Fibonacci :");
-
 // while (compteur < nombreTermes) {
 //   console.log(termeCourant);
-
 //   let temp = termeCourant + termeSuivant;
 //   termeCourant = termeSuivant;
 //   termeSuivant = temp;
-
 //   compteur++;
 // }
 
@@ -162,11 +158,14 @@
 // }
 // console.log(`La somme des nombres pairs jusqu'à ${nombreSaisi} est : ${somme}`);
 
-let nombre = parseInt(prompt("Entrez un nombre entier positif"));
-let somme = 0;
-let compteur = 1;
-while (compteur <= nombre) {
-  somme += compteur;
-  compteur++;
-}
-console.log(`La somme des nombres de 1 à ${nombre} est : ${somme}`);
+// let nombre = parseInt(prompt("Entrez un nombre entier positif"));
+// let somme = 0;
+// let compteur = 1;
+// while (compteur <= nombre) {
+//   somme += compteur;
+//   compteur++;
+// }
+// console.log(`La somme des nombres de 1 à ${nombre} est : ${somme}`);
+
+let nombre = parseInt(prompt("Entrez un nombre entier"))
+
