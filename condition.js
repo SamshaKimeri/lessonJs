@@ -185,22 +185,164 @@
 //     "x contient une valeur strictement supérieur à 2";
 // }
 
-let x = 1;
-let y = -20;
-let z = 3;
-if ((x <= 25 - 15 && x >= 0) || y < 0) {
-  //   document.getElementById("p1").innerHTML =
-  console.log(
-    "cette phrase s'affiche si x contient une valeur comprise entre 0 et 10 OU si y contient une valeur strictement négative(ou si ces deux conditions sont réunies)"
-  );
-}
-if (x <= 25 - 15 && (x >= 0 || y < 0)) {
-  // document.getElementById("p2").innerHTML =
-  console.log(
-    "cette phrase s'affiche si x contient une valeur inférieure ou égale à 10 ET si soit x contient une valeur supérieure à O, soit y contient une valeur strictement négative(soit les deux conditions sont réunies)"
-  );
-}
-if (!z == true) {
-  // document.getElementById("p3").innerHTML =
-  console.log("contient une valeur évalué à false");
-}
+// let x = 1;
+// let y = -20;
+// let z = 3;
+// if ((x <= 25 - 15 && x >= 0) || y < 0) {
+//   //   document.getElementById("p1").innerHTML =
+//   console.log(
+//     "cette phrase s'affiche si x contient une valeur comprise entre 0 et 10 OU si y contient une valeur strictement négative(ou si ces deux conditions sont réunies)"
+//   );
+// }
+// if (x <= 25 - 15 && (x >= 0 || y < 0)) {
+//   // document.getElementById("p2").innerHTML =
+//   console.log(
+//     "cette phrase s'affiche si x contient une valeur inférieure ou égale à 10 ET si soit x contient une valeur supérieure à O, soit y contient une valeur strictement négative(soit les deux conditions sont réunies)"
+//   );
+// }
+// if (!z == true) {
+//   // document.getElementById("p3").innerHTML =
+//   console.log("contient une valeur évalué à false");
+// }
+
+// Opérateur ternaire
+// let age = 20;
+// Utilisation de l'opérateur ternaire pour déterminer si une personne est majeure ou mineure
+// let statut = (age >= 18) ? "Majeur" : "Mineur";
+// console.log(statut);  // Affichera "Majeur" si l'âge est supérieur ou égal à 18, sinon affichera "Mineur"
+
+// Lorsqu'une variable est null, cela indique souvent l'absence intentionnelle de valeur.
+//  Cela peut être utile pour initialiser une variable avant de lui attribuer une valeur
+//  spécifique, ou pour indiquer qu'une variable ne pointe actuellement vers aucun objet.
+// let utilisateurConnecte = null;
+// ... Plus de code ...
+// Plus tard dans le programme, on attribue une valeur à la variable
+// if (condition) {
+// utilisateurConnecte = obtenirUtilisateurConnecte();
+// } else {
+// utilisateurConnecte = null;  // Par exemple, déconnecter l'utilisateur
+// }
+// Utilisation de la variable
+// if (utilisateurConnecte !== null) {
+// console.log("L'utilisateur est connecté : " + utilisateurConnecte.nom);
+// } else {
+// console.log("Aucun utilisateur n'est actuellement connecté.");
+// }
+
+// L'utilisateur saisi un nombre
+// On affiche si le nombre est pair ou impair
+// let nombre = parseInt(prompt("Saisissez un nombre"));
+// if (nombre % 2 === 0) {
+//   console.log("Le nombre est pair");
+// } else {
+//   console.log("Le nombre est impair");
+// }
+
+// OU ALORS
+// let nombre = prompt("Veuillez saisir un nombre : ");
+// // Convertir l'entrée en un nombre entier
+// nombre = parseInt(nombre);
+// // Vérifier si le nombre est pair ou impair
+// if (isNaN(nombre)) {
+//   console.log("Veuillez saisir un nombre valide.");
+// } else {
+//   if (nombre % 2 === 0) {
+//     console.log("Le nombre est pair.");
+//   } else {
+//     console.log("Le nombre est impair.");
+//   }
+// }
+
+// L'utilisateur entre son mot de passe
+// let motDePasse = prompt("Veuillez taper votre mot de passe");
+// if (motDePasse === "motdepasse123") {
+//   console.log("le mot de passe est exact");
+// } else {
+//   console.log("Veuillez retaper le mot de passe");
+// }
+// // Exercice : Calcul de la moyenne
+// // Demander à l'utilisateur de saisir trois notes
+// let note1 = parseFloat(prompt("Saisissez la première note (sur 20) :"));
+// let note2 = parseFloat(prompt("Saisissez la deuxième note (sur 20) :"));
+// let note3 = parseFloat(prompt("Saisissez la troisième note (sur 20) :"));
+// // Vérifier si les entrées sont des nombres valides
+// if (isNaN(note1) || isNaN(note2) || isNaN(note3)) {
+//     console.log("Veuillez saisir des notes valides (chiffres).");
+// } else {
+//     // Calculer la moyenne
+//     let moyenne = (note1 + note2 + note3) / 3;
+//     // Vérifier si l'utilisateur a réussi ou échoué
+//     if (moyenne >= 10) {
+//         console.log("Félicitations ! Vous avez réussi avec une moyenne de " + moyenne.toFixed(2));
+//     } else {
+//         console.log("Désolé, vous avez échoué avec une moyenne de " + moyenne.toFixed(2));
+//     }
+// }
+
+// Comparer deux nombres
+// let nombre1 = prompt("saisir un prmier nombre");
+// let nombre2 = prompt("saisir un deuxième nombre");
+// if (isNaN(nombre1) || isNaN(nombre2)) {
+//   console.log("Veuillez entrer des nombres");
+// } else {
+//   if (nombre1 > nombre2) {
+//     console.log(`${nombre1} est plus grand que ${nombre2}`);
+//   } else if (nombre1 < nombre2) {
+//     console.log(`${nombre2} est plus grand que ${nombre1}`);
+//   } else {
+//     console.log("Les deux nombres sont égaux");
+//   }
+// }
+
+// Etes vous majeur ou mineur
+// let age = prompt("Saisissez votre âge");
+// if (isNaN(age)) {
+//   console.log("Saisissez un âge");
+// } else {
+//   if (age >= 18) {
+//     console.log("Vous pouvez voter");
+//   } else {
+//     console.log("Vous n'avez pas l'age");
+//   }
+// }
+
+// Exercice : Calcul de frais de livraison
+// Demander à l'utilisateur de saisir le montant total de ses achats
+// let montantTotal = parseFloat(
+// prompt("Entrez le montant total de vos achats :")
+// );
+// Vérifier si l'entrée est un nombre valide
+// if (isNaN(montantTotal)) {
+// console.log("Veuillez saisir un montant valide.");
+// } else {
+// Appliquer une réduction si le montant total est supérieur ou égal à 50
+// if (montantTotal >= 50) {
+// let reduction = 0.1 * montantTotal; // 10% de réduction
+// let montantFinal = montantTotal - reduction;
+// console.log("Félicitations ! Vous avez droit à une réduction de 10%.");
+// console.log(
+// "Montant total après réduction : " + montantFinal.toFixed(2) + " euros"
+// );
+// } else {
+// console.log(
+// "Désolé, pas de réduction applicable pour les montants inférieurs à 50 euros."
+// );
+// console.log(
+// "Montant total à payer : " + montantTotal.toFixed(2) + " euros"
+// );
+// }
+// }
+
+// Vérifier quel type de triangle
+// let cote1 = prompt("Rentrer une première longueur");
+// let cote2 = prompt("Rentrer une deuxième longueur");
+// let cote3 = prompt("Rentrer une troisième longueur");
+// if (cote1 === cote2 && cote1 === cote3 && cote2 === cote3) {
+//   console.log("équilatéral");
+// } else if (cote1 === cote2 || cote1 === cote3 || cote2 === cote3) {
+//   console.log("isocèle");
+// } else {
+//   console.log("scalène");
+// }
+// {
+// }
