@@ -60,21 +60,6 @@
 //     let input1 = document.getElementById("input1").value;
 // })
 
-// let jour = 3;
-// switch (jour) {
-//   case 1:
-//     console.log("lundi");
-//     break;
-//   case 2:
-//     console.log("mardi");
-//     break;
-//   case 3:
-//     console.log("mercredi");
-//     break;
-//   default:
-//     console.log("Vous avez fait une erreur de frappe");
-// }
-
 // for (let i = 10; i >= 0; i -= 2) {
 //   console.log(i);
 // // }
@@ -83,49 +68,6 @@
 //     console.log(i);
 //   }
 // }
-
-// let fruit = "banane";
-// switch (fruit) {
-//   case "pomme":
-//     console.log("les pommes sont rouges ou vertes");
-//     break;
-//   case "banane":
-//     console.log("les bananes sont jaunes");
-//     break;
-//   default:
-//     console.log("je ne connais pas cette couleur");
-//     break;
-// }
-
-// let mois = 3;
-// switch (mois) {
-//   case 1:
-//     console.log("janvier à 31 jour");
-//     break;
-//   case 2:
-//     console.log("février à 28 ou 29 jours");
-//     break;
-//   default:
-//     console.log("le mois est invalide");
-//     break;
-// }
-
-// Quelle est la meilleure actrice?
-// let meilleurFilm = "Black Swan";
-// let meilleureActrice = "";
-
-// switch (meilleurFilm) {
-//   case "La Môme":
-//     meilleureActrice = "Marion Cotillard";
-//     break;
-//   case "Mama Mia":
-//     meilleureActrice = "Meryl Streep";
-//     break;
-//   case "Black Swan":
-//     meilleureActrice = "Natalie Portman";
-//     break;
-// }
-// console.log(meilleureActrice);
 
 // let x = 4;
 // let y = 3;
@@ -345,4 +287,30 @@
 //   console.log("scalène");
 // }
 // {
+// }
+
+// Exercice : Calcul de l'IMC
+// Demander à l'utilisateur de saisir sa masse et sa taille
+// let masse = parseFloat(prompt("Entrez votre masse en kilogrammes :"));
+// let taille = parseFloat(prompt("Entrez votre taille en centimètre :"));
+
+// // Vérifier si les entrées sont des nombres valides
+// if (isNaN(masse) || isNaN(taille) || masse <= 0 || taille <= 0) {
+//   console.log(
+//     "Veuillez saisir des valeurs valides (masse et taille doivent être des nombres positifs)."
+//   );
+// } else {
+//   // Calculer l'IMC
+//   let imc = masse / (taille * taille);
+
+//   // Afficher la catégorie d'IMC
+//   if (imc < 18.5) {
+//     console.log("Votre IMC est en catégorie sous-poids.");
+//   } else if (imc < 25) {
+//     console.log("Votre IMC est en catégorie poids normal.");
+//   } else if (imc < 30) {
+//     console.log("Votre IMC est en catégorie surpoids.");
+//   } else {
+//     console.log("Votre IMC est en catégorie obésité.");
+//   }
 // }
