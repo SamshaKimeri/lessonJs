@@ -335,9 +335,151 @@
 // }
 
 // OU
-let listeDeCourses = {
-  articles: ["pain", "lait", "beurre"],
-};
-for (let i = 0; i < listeDeCourses.articles.length; i++) {
-  console.log(listeDeCourses.articles[i]);
-}
+// let listeDeCourses = {
+// articles: ["pain", "lait", "beurre"],
+// };
+// for (let i = 0; i < listeDeCourses.articles.length; i++) {
+// console.log(listeDeCourses.articles[i]);
+// }
+
+// / Utilisation de for...of pour parcourir les caractères d'une chaîne
+// let message = "Bonjour";
+// for (let char of message) {
+//   console.log(char);
+// }
+
+// let maChaine = "JavaScript";
+// for (let i = 0; i < maChaine.length; i++) {
+//   console.log(maChaine[i]);
+// }
+
+// let maChaine = "Bonjour, monde !";
+// Utilisation de la propriété length sur une chaîne de caractères
+// let longueur = maChaine.length;
+// console.log(longueur); // Affiche la longueur de la chaîne, dans ce cas, 16
+
+// !!! Utilisation de spread operator avec tableau
+// 1.Copier un tableau
+// let tableauOriginal = [1, 2, 3];
+// let nouveauTableau = [...tableauOriginal];
+// console.log(nouveauTableau); // Affiche [1, 2, 3]
+
+// 2.Combinaison de tableaux
+// let tableau1 = [1, 2, 3];
+// let tableau2 = [4, 5, 6];
+// let tableauCombine = [...tableau1, ...tableau2];
+// console.log(tableauCombine); // Affiche [1, 2, 3, 4, 5, 6]
+
+// 3.Ajout d'éléments à un tableau
+// let tableauInitial = [1, 2, 3];
+// let nouvelElement = 4;
+// let tableauModifie = [...tableauInitial, nouvelElement];
+// console.log(tableauModifie); // Affiche [1, 2, 3, 4]
+
+// !!Utilisation spread operator avec objet
+// 1.copie d'objet
+// let objetOriginal = { a: 1, b: 2 };
+// let nouvelObjet = { ...objetOriginal };
+// console.log(nouvelObjet); // Affiche { a: 1, b: 2 }
+
+// 2.Fusion d'objet
+// let objet1 = { a: 1, b: 2 };
+// let objet2 = { c: 3, d: 4 };
+// let objetCombine = { ...objet1, ...objet2 };
+// console.log(objetCombine); // Affiche { a: 1, b: 2, c: 3, d: 4 }
+
+// 3.Ajout de propriété à un objet
+// let objetInitial = { a: 1, b: 2 };
+// let nouvellePropriete = { c: 3 };
+// let objetModifie = { ...objetInitial, ...nouvellePropriete };
+// console.log(objetModifie); // Affiche { a: 1, b: 2, c: 3 }
+
+// !!Utilisation spread operator avec des arguments de Fonction
+// function maFonction(a, b, c) {
+//   console.log(a, b, c);
+// }
+// let tableauArguments = [1, 2, 3];
+// maFonction(...tableauArguments); // Affiche 1 2 3
+
+// !! Utilisation de replace()
+// regexp : Une expression régulière ou une sous-chaîne à rechercher dans la chaîne d'origine.
+// substr : La sous-chaîne à rechercher dans la chaîne d'origine.
+// newSubstr : La sous-chaîne qui remplacera la correspondance.
+// function : Une fonction qui sera appelée pour chaque correspondance trouvée,
+// et qui renverra la sous-chaîne de remplacement.
+
+// 1. Remplacement d'une sous-chaîne simple :
+// let phrase = "Bonjour, monde !";
+// let nouvellePhrase = phrase.replace("monde", "JavaScript");
+// console.log(nouvellePhrase);
+// Affiche "Bonjour, JavaScript !"
+
+// 2. Utilisation d'une expression régulière pour un remplacement global :
+// let texte = "Le JavaScript est génial. JavaScript est puissant.";
+// let nouveauTexte = texte.replace(/JavaScript/g, "Node.js");
+// console.log(nouveauTexte);
+// Affiche "Le Node.js est génial. Node.js est puissant."
+
+// 3. Utilisation d'une fonction pour générer la sous-chaîne de remplacement :
+// let nombre = 42;
+// let chaine = "Le nombre est : {nombre}";
+// let nouvelleChaine = chaine.replace(/{nombre}/g, function () {
+//   return nombre;
+// });
+// console.log(nouvelleChaine);
+// Affiche "Le nombre est : 42"
+
+// !!Utilisation simple de la méthode concat()
+// !! nouvelleChaine = chaine.concat(string1, string2, ..., stringN);
+
+// 1. Concaténation de deux chaînes
+// let chaine1 = "Bonjour";
+// let chaine2 = "monde";
+// let nouvelleChaine = chaine1.concat(", ", chaine2, "!");
+// console.log(nouvelleChaine);
+// Affiche "Bonjour, monde!"
+
+// 2. Concaténation avec des variables
+// let prenom = "Alice";
+// let nom = "Dupont";
+// let age = 25;
+// let message =
+//   "Bonjour, je m'appelle " +
+//   prenom.concat(" ", nom) +
+//   " et j'ai " +
+//   age +
+//   " ans.";
+// console.log(message);
+// Affiche "Bonjour, je m'appelle Alice Dupont et j'ai 25 ans."
+
+// !! Utilisation de math.random() et math.floor()
+// 1. Génération de couleurs aléatoires en RGB
+// function couleurAleatoire() {
+//   const rouge = Math.floor(Math.random() * 256);
+//   const vert = Math.floor(Math.random() * 256);
+//   const bleu = Math.floor(Math.random() * 256);
+//   return `rgb(${rouge}, ${vert}, ${bleu})`;
+// }
+// console.log(couleurAleatoire());
+
+// 2. Sélection aléatoire d'éléments d'un tableau
+// const options = ["Pierre", "Papier", "Ciseaux"];
+// const choixAleatoire = options[Math.floor(Math.random() * options.length)];
+// console.log(choixAleatoire);
+
+// 3. Simulation de lancer de dé
+// function lancerDe() {
+//   return Math.floor(Math.random() * 6) + 1;
+// }
+// console.log(lancerDe());
+
+// 4. Mélange aléatoire d'un tableau (algorithme de Fisher-Yates)
+// function melangerTableau(tableau) {
+//   for (let i = tableau.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     [tableau[i], tableau[j]] = [tableau[j], tableau[i]];
+//   }
+// }
+// const monTableau = [1, 2, 3, 4, 5];
+// melangerTableau(monTableau);
+// console.log(monTableau);
