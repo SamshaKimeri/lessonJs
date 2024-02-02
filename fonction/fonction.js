@@ -169,7 +169,6 @@
 // l'utilisateur est en ligne
 // let online = true;
 // let message = "";
-
 // if (online) {
 //   message = "Utilisateur en ligne !";
 // } else {
@@ -180,7 +179,6 @@
 // Pour autorisé l'acces
 // let motDePasse = "Multipass";
 // let message = "";
-
 // if (motDePasse !== "Multipass") {
 //   message = "Accès non autorisé";
 // } else {

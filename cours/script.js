@@ -483,3 +483,131 @@
 // const monTableau = [1, 2, 3, 4, 5];
 // melangerTableau(monTableau);
 // console.log(monTableau);
+
+// Mélanger aléatoirement un jeu de carte
+// function melangerCartes() {
+//   const cartes = [
+//     "2",
+//     "3",
+//     "4",
+//     "5",
+//     "6",
+//     "7",
+//     "8",
+//     "9",
+//     "10",
+//     "J",
+//     "Q",
+//     "K",
+//     "A",
+//   ];
+//   const enseignes = ["Coeur", "Carreau", "Trèfle", "Pique"];
+//   const jeuDeCartes = [];
+//   // Créer le jeu de cartes
+//   for (const enseigne of enseignes) {
+//     for (const carte of cartes) {
+//       jeuDeCartes.push(`${carte} de ${enseigne}`);
+//     }
+//   }
+//   // Mélanger le jeu de cartes avec l'algorithme de Fisher-Yates
+//   for (let i = jeuDeCartes.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     [jeuDeCartes[i], jeuDeCartes[j]] = [jeuDeCartes[j], jeuDeCartes[i]];
+//   }
+//   return jeuDeCartes;
+// }
+// const jeuMelange = melangerCartes();
+// console.log(jeuMelange);
+
+// Mélanger une liste de noms
+// function melangerNoms(noms) {
+//     melangerTableau(noms);
+//     return noms;
+// }
+// const listeNoms = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'];
+// const nomsMelanges = melangerNoms(listeNoms);
+// console.log(nomsMelanges);
+
+// Mélanger des questions d'un quiz
+// function melangerQuestions(questions) {
+//     melangerTableau(questions);
+//     return questions;
+// }
+// const quizQuestions = [
+//     'Quelle est la capitale de la France?',
+//     'Quel est le plus grand océan du monde?',
+//     'Combien de continents y a-t-il sur Terre?',
+//     'Qui a écrit Roméo et Juliette?'
+// ];
+// const questionsMelangees = melangerQuestions(quizQuestions);
+// console.log(questionsMelangees);
+
+// Mélange aleatoire sans tableau
+// Exemple avec une liste d'éléments
+// let element1 = "Premier élément";
+// let element2 = "Deuxième élément";
+// let element3 = "Troisième élément";
+// Générer un nombre aléatoire entre 1 et le nombre total d'éléments
+// let nombreAleatoire = Math.floor(Math.random() * 3) + 1;
+
+// Sélectionner l'élément en fonction du nombre aléatoire généré
+// let elementSelectionne;
+// switch (nombreAleatoire) {
+//     case 1:
+//         elementSelectionne = element1;
+//         break;
+//     case 2:
+//         elementSelectionne = element2;
+//         break;
+//     case 3:
+//         elementSelectionne = element3;
+//         break;
+//     default:
+// Gérer le cas par défaut si nécessaire
+//         break;
+// }
+// console.log("Élément sélectionné :", elementSelectionne);
+
+// let tableau2D = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// console.log(tableau2D[1][2]); // Accède à l'élément à la deuxième ligne, troisième colonne
+
+// let nombres = [5, 10, 15, 20, 25];
+// let somme = 0;
+// for (let i = 0; i < nombres.length; i++) {
+//   somme += nombres[i];
+// }
+// console.log(somme);
+
+// let nombres = [12, 5, 8, 22, 15, 30];
+// let grand = nombres[0];
+// for (let i = 0; i < nombres.length; i++) {
+//   if (nombres[i] > grand) {
+//     grand = nombres[i];
+//   }
+// }
+// console.log(grand);
+
+// let nombres = [12, 5, 8, 22, 15, 30];
+// // Initialisez une variable pour stocker le maximum
+// let maximum = nombres[0];
+// // Parcourez le tableau pour trouver le maximum
+// for (let i = 1; i < nombres.length; i++) {
+//     if (nombres[i] > maximum) {
+//         maximum = nombres[i];
+//     }
+// }
+// // Affichez le résultat dans la console
+// console.log("Le plus grand nombre est :", maximum);
+
+let nombre = [2, 5, 8, 11, 14, 17, 20];
+let pair = [];
+for (let i = 0; i < nombre.length; i++) {
+  if (nombre[i] % 2 === 0) {
+    pair.push(nombre[i]);
+  }
+}
+console.log(pair);

@@ -167,5 +167,4 @@
 // }
 // console.log(`La somme des nombres de 1 à ${nombre} est : ${somme}`);
 
-let nombre = parseInt(prompt("Entrez un nombre entier"))
-
+let nombre = parseInt(prompt("Entrez un nombre entier"));
