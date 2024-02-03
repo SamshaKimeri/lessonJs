@@ -1,8 +1,8 @@
 // Exo
 // Comptez de zéro à 5
-// for (let i = 0; i < 5; i++) {
-//   console.log(i);
-// }
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
 
 // Comptez de 5 à zéro
 // for (let i = 5; i >= 0; i--) {
