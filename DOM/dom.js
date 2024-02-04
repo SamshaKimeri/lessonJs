@@ -11,3 +11,10 @@ console.log(listeInputRadio);
 for (let i = 0; i < listeInputRadio.length; i++) {
   console.log(listeInputRadio[i]);
 }
+
+// IMAGE
+let image = document.getElementById("fleur");
+// image.setAttribute("src", "tournesol.jpg");
+image.src = "tournesol.jpg";
+
+image.classList.remove("noirEtBlanc");
