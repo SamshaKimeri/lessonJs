@@ -18,3 +18,23 @@ let image = document.getElementById("fleur");
 image.src = "tournesol.jpg";
 
 image.classList.remove("noirEtBlanc");
+
+// CREATE ELEMENT
+let titrePage = "le titre de ma page";
+// let h1 = document.createElement("h1");
+// h1.innerText = titrePage;
+let body = querySelector("body");
+// body.appendChild(h1);
+
+let html = `
+  <header>
+    <h1>${titrePage}</h1>
+  </header>
+`;
+body.innerHtml.html;
+
+let nouvelElement = document.createElement("div");
+// Récupérer un élément parent existant
+let parentElement = document.getElementById("conteneur");
+// Ajouter le nouvel élément au parent
+parentElement.appendChild(nouvelElement);

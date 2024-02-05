@@ -46,8 +46,14 @@
 // }
 
 function afficherResultat(score, nbMotsProposes) {
-  // On affiche le score de l'utilisateur
+  // On affiche le score de l'utilisateur dans la console
   console.log("Votre score est de : " + score + " sur " + nbMotsProposes);
+  // Récupération de la zone dans laquelle on va écrire le score
+  let spanScore = document.querySelector(".zoneScore span");
+  // Ecriture du texte
+  let affichageScore = `${score} / ${nbMotsProposes}`;
+  // On place le texte à l'intérieur du span
+  spanScore.innerText = affichageScore;
 }
 
 function choisirPhrasesOuMots() {
