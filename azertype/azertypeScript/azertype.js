@@ -51,7 +51,7 @@ function afficherResultat(score, nbMotsProposes) {
   // Récupération de la zone dans laquelle on va écrire le score
   let spanScore = document.querySelector(".zoneScore span");
   // Ecriture du texte
-  let affichageScore = `${score} / ${nbMotsProposes}`;
+  let affichageScore = `${score} sur ${nbMotsProposes}`;
   // On place le texte à l'intérieur du span
   spanScore.innerText = affichageScore;
 }
