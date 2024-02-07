@@ -56,38 +56,62 @@ function afficherResultat(score, nbMotsProposes) {
   spanScore.innerText = affichageScore;
 }
 
-function choisirPhrasesOuMots() {
-  // Tant que l'utilisateur n'a pas choisis "mots" ou "phrases", on lui redemande
-  let choix = prompt("Veuillez choisir la liste : mots ou phrases");
-  while (choix !== "mots" && choix !== "phrases") {
-    choix = prompt("écris : mots ou phrases");
-  }
-  return choix;
-}
+// function choisirPhrasesOuMots() {
+//   // Tant que l'utilisateur n'a pas choisis "mots" ou "phrases", on lui redemande
+//   let choix = prompt("Veuillez choisir la liste : mots ou phrases");
+//   while (choix !== "mots" && choix !== "phrases") {
+//     choix = prompt("écris : mots ou phrases");
+//   }
+//   return choix;
+// }
 
-function lancerBoucleDeJeu(listePropositions) {
-  let score = 0;
-  for (let i = 0; i < listePropositions.length; i++) {
-    motUtilisateur = prompt("Entrez le mot : " + listePropositions[i]);
-    if (motUtilisateur === listePropositions[i]) {
-      score++;
-    }
-  }
-  return score;
+// function lancerBoucleDeJeu(listePropositions) {
+//   let score = 0;
+//   for (let i = 0; i < listePropositions.length; i++) {
+//     motUtilisateur = prompt("Entrez le mot : " + listePropositions[i]);
+//     if (motUtilisateur === listePropositions[i]) {
+//       score++;
+//     }
+//   }
+//   return score;
+// }
+
+function afficherPropsition(proposition) {
+  let zoneProposition = document.querySelector(".zoneProposition");
+  zoneProposition.innerText = proposition;
 }
 
 function lancerJeu() {
-  let choix = choisirPhrasesOuMots;
+  // let choix = choisirPhrasesOuMots;
   let score = 0;
-  let nbMotsProposes = 0;
+  // let nbMotsProposes = 0;
+  let i = 0;
 
-  if (choix === "mots") {
-    score = lancerBoucleDeJeu(listeMots);
-    nbMotsProposes = listeMots.length;
-  } else {
-    score = lancerBoucleDeJeu(listePhrases);
-    nbMotsProposes = listePhrases.length;
-  }
+  // if (choix === "mots") {
+  //   score = lancerBoucleDeJeu(listeMots);
+  //   nbMotsProposes = listeMots.length;
+  // } else {
+  //   score = lancerBoucleDeJeu(listePhrases);
+  //   nbMotsProposes = listePhrases.length;
+  // }
 
-  afficherResultat(score, nbMotsProposes);
+  let btnValiderMot = document.getElementById("btnValiderMot");
+  let inputEcriture = document.getElementById("inputEcriture");
+  afficherPropsition(listeMots[i]);
+  btnValiderMot.addEventListener("click", () => {
+    console.log(inputEcriture.value);
+    if (inputEcriture.value === listeMots[i]) {
+      score++;
+    }
+    i++;
+    afficherResultat(score, i);
+    inputEcriture.value = "";
+    if (listeMots[i] === undefined) {
+      afficherPropsition("Le jeu est fini");
+      btnValiderMot.ariaDisabled = true;
+    } else {
+      afficherPropsition(listeMots[i]);
+    }
+  });
+  afficherResultat(score, i);
 }
