@@ -1,13 +1,14 @@
 // exo1
-
+function multiplier(numberOne, numberTwo) {
+  return numberOne * numberTwo;
+}
 let buttonEx1 = document.getElementById("buttonEx1");
-let resultEx1 = document.querySelector("#resultEx1");
+let resultEx1 = document.getElementById("resultEx1");
 buttonEx1.addEventListener("click", () => {
-  console.log(resultEx1.value);
-  // let numberOne = document.getElementById("numberOne");
-  // let numberTwo = document.getElementById("nomberTwo");
-  // function multiplier(numberOne, numberTwo) {
-  //   let totalDeMultiplier = numberOne * numberTwo;
-  //   return totalDeMultiplier;
-  // }
+  let numberOne = document.getElementById("numberOne").value;
+  let numberTwo = document.getElementById("numberTwo").value;
+  let total = multiplier(numberOne, numberTwo);
+  resultEx1.textContent = `Le total de ${numberOne} * ${numberTwo} est :  ${total}`;
 });
+
+// exo2
