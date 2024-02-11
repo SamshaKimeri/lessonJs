@@ -99,31 +99,136 @@ btn9.addEventListener("click", () => {
   }
 });
 
-// Sélectionner les éléments champ de texte et bouton
-const montantEurosInput = document.getElementById("montantEuros");
-const convertirBtn = document.getElementById("convertirBtn");
-const resultatParagraphe = document.getElementById("resultat");
+// // Sélectionner les éléments champ de texte et bouton
+// const montantEurosInput = document.getElementById("montantEuros");
+// const convertirBtn = document.getElementById("convertirBtn");
+// const resultatParagraphe = document.getElementById("resultat");
+// // Taux de change : 1 euro = 1.12 dollars
+// const tauxDeChange = 1.12;
+// // Ajouter un gestionnaire d'événements pour le clic sur le bouton
+// convertirBtn.addEventListener("click", function () {
+//   // Récupérer le montant en euros saisi par l'utilisateur
+//   const montantEuros = parseFloat(montantEurosInput.value);
+//   // Vérifier si le montant saisi est un nombre
+//   if (!isNaN(montantEuros)) {
+//     // Convertir le montant en euros en dollars
+//     const montantDollars = montantEuros * tauxDeChange;
+//     // Afficher le résultat
+//     resultatParagraphe.textContent = `${montantEuros} euros équivalent à ${montantDollars.toFixed(
+//       2
+//     )} dollars`;
+//   } else {
+//     // Afficher un message d'erreur si le montant saisi n'est pas un nombre
+//     resultatParagraphe.textContent =
+//       "Veuillez entrer un montant valide en euros.";
+//   }
+// });
 
-// Taux de change : 1 euro = 1.12 dollars
-const tauxDeChange = 1.12;
-
-// Ajouter un gestionnaire d'événements pour le clic sur le bouton
-convertirBtn.addEventListener("click", function () {
-  // Récupérer le montant en euros saisi par l'utilisateur
-  const montantEuros = parseFloat(montantEurosInput.value);
-
-  // Vérifier si le montant saisi est un nombre
-  if (!isNaN(montantEuros)) {
-    // Convertir le montant en euros en dollars
-    const montantDollars = montantEuros * tauxDeChange;
-
-    // Afficher le résultat
-    resultatParagraphe.textContent = `${montantEuros} euros équivalent à ${montantDollars.toFixed(
-      2
-    )} dollars`;
+// Exo 10
+function aire(number10, number100) {
+  return (number10 * number100) / 2;
+}
+let number10 = document.getElementById("number10");
+let number100 = document.getElementById("number100");
+let btn10 = document.getElementById("btn10");
+let resultat10 = document.getElementById("resultat10");
+btn10.addEventListener("click", () => {
+  if (isNaN(number10.value) && isNaN(number100.value)) {
+    resultat10.textContent = `Veuilez entrerr un chiffre`;
   } else {
-    // Afficher un message d'erreur si le montant saisi n'est pas un nombre
-    resultatParagraphe.textContent =
-      "Veuillez entrer un montant valide en euros.";
+    let calculAire = (number10.value, number100.value);
+    resultat10.textContent = `${calculAire}`;
   }
 });
+
+// Exo11
+let btn11 = document.getElementById("btn11");
+let divExo11 = document.getElementById("div-exo-11");
+btn11.addEventListener("click", () => {
+  let newParagraphe11 = document.createElement("p");
+  newParagraphe11.textContent = "Bonjour et bienvenue sur ma page";
+  divExo11.appendChild(newParagraphe11);
+  btn11.style.display = "none";
+});
+
+// Exo12
+let btn12 = document.getElementById("btn12");
+let divExo12 = document.getElementById("div-exo-12");
+btn12.addEventListener("click", () => {
+  let newParagraphe12 = document.createElement("p");
+  newParagraphe12.textContent =
+    "Bonjour, voici un texte qui se place avant le bouton";
+  divExo12.insertBefore(newParagraphe12, btn12);
+});
+
+// Exo13
+let div13 = document.getElementById("div13");
+let btn13 = document.getElementById("btn13");
+let btn131 = document.getElementById("btn131");
+let newParagraphe13;
+
+btn13.addEventListener("click", () => {
+  newParagraphe13 = document.createElement("p");
+  newParagraphe13.textContent = "Bonjour et bienvenue";
+  div13.appendChild(newParagraphe13);
+});
+btn131.addEventListener("click", () => {
+  if (newParagraphe13) {
+    newParagraphe13.remove();
+  }
+});
+
+// Exo14
+let div14 = document.getElementById("div14");
+let btn14 = document.getElementById("btn14");
+btn14.addEventListener("click", () => {
+  let newParagraphe14 = document.createElement("p");
+  newParagraphe14.textContent = "Bonjour";
+  div14.appendChild(newParagraphe14);
+});
+
+// Exo15
+let div15 = document.getElementById("div15");
+let btn15 = document.getElementById("btn15");
+// let newParagraphe15;
+btn15.addEventListener("click", () => {
+  let newParagraphe15 = document.createElement("p");
+  newParagraphe15.textContent = "Bonjour";
+  div15.appendChild(newParagraphe15);
+
+  if (newParagraphe15.textContent === "Bonjour") {
+    // newParagraphe15.remove();
+    // div15.appendChild(newParagraphe15);
+    newParagraphe15.textContent = "Au revoir";
+  }
+});
+
+// newParagraphe15.remove();
+// btn15.addEventListener("click", () => {
+//   newParagraphe15.textContent = "Au revoir";
+//   div15.appendChild(newParagraphe15);
+// });
+// }
+// let div15 = document.getElementById("div15");
+// let btn15 = document.getElementById("btn15");
+// let newParagraphe15;
+
+// // Fonction pour gérer le clic sur le bouton
+// function handleClick() {
+//   // Si le paragraphe existe déjà
+//   if (newParagraphe15) {
+//     // Supprimer le paragraphe
+//     newParagraphe15.remove();
+//     // Réinitialiser newParagraphe15
+//     newParagraphe15 = null;
+//   } else {
+//     // Créer un nouveau paragraphe avec le texte "Bonjour"
+//     newParagraphe15 = document.createElement("p");
+//     newParagraphe15.textContent = "Bonjour";
+//     // Ajouter le paragraphe au div
+//     div15.appendChild(newParagraphe15);
+//   }
+// }
+
+// // Ajouter un gestionnaire d'événements pour le clic sur le bouton
+// btn15.addEventListener("click", handleClick);
