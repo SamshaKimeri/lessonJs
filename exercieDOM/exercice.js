@@ -141,6 +141,7 @@ btn10.addEventListener("click", () => {
   }
 });
 
+// Utilisation de createElement
 // Exo11
 let btn11 = document.getElementById("btn11");
 let divExo11 = document.getElementById("div-exo-11");
@@ -190,45 +191,113 @@ btn14.addEventListener("click", () => {
 // Exo15
 let div15 = document.getElementById("div15");
 let btn15 = document.getElementById("btn15");
-// let newParagraphe15;
-btn15.addEventListener("click", () => {
-  let newParagraphe15 = document.createElement("p");
-  newParagraphe15.textContent = "Bonjour";
-  div15.appendChild(newParagraphe15);
-
-  if (newParagraphe15.textContent === "Bonjour") {
-    // newParagraphe15.remove();
-    // div15.appendChild(newParagraphe15);
-    newParagraphe15.textContent = "Au revoir";
+// Créer une variable pour suivre l'état du message
+var messageAffiche = false;
+// Ajouter un gestionnaire d'événements pour le clic sur le bouton
+btn15.addEventListener("click", function () {
+  // Créer un nouvel élément paragraphe
+  var nouveauParagraphe = document.createElement("p");
+  // Choisir le message en fonction de l'état actuel
+  var message;
+  if (messageAffiche) {
+    message = "Au revoir !";
+  } else {
+    message = "Bonjour !";
   }
+  // Mettre à jour l'état du message pour le prochain clic
+  messageAffiche = !messageAffiche;
+  // Ajouter du texte au paragraphe
+  nouveauParagraphe.textContent = message;
+  // Ajouter le paragraphe à la fin du body
+  div15.appendChild(nouveauParagraphe);
 });
 
-// newParagraphe15.remove();
-// btn15.addEventListener("click", () => {
-//   newParagraphe15.textContent = "Au revoir";
-//   div15.appendChild(newParagraphe15);
+// Exo16
+let btn16 = document.getElementById("btn16");
+let div16 = document.getElementById("div16");
+function ajouterParagraphe() {
+  let newParagraphe16 = document.createElement("p");
+  newParagraphe16.textContent = "J'ajoute un nouveau paragraphe";
+  div16.appendChild(newParagraphe16);
+}
+btn16.addEventListener("click", ajouterParagraphe);
+
+// Exo17
+let myForm17 = document.getElementById("myForm17");
+let output17 = document.getElementById("output17");
+function handleFormSubmit(event) {
+  event.preventDefault();
+  let name17 = document.getElementById("name17").value;
+  let age17 = document.getElementById("age17").value;
+  let newparagraphe17 = document.createElement("p");
+  newparagraphe17.textContent = "Nom : " + name17 + ", Age : " + age17 + " ans";
+  output17.appendChild(newparagraphe17);
+}
+myForm17.addEventListener("submit", handleFormSubmit);
+
+// Exo18
+let output18 = document.getElementById("output18");
+function handleFormSubmit(event) {
+  event.preventDefault();
+  let name18 = document.getElementById("name18").value;
+  let message18 = document.getElementById("message18").value;
+  let newParagraphe18 = document.createElement("p");
+  newParagraphe18.textContent = name18 + message18;
+  output18.appendChild(newParagraphe18);
+}
+let myForm18 = document.getElementById("myForm18");
+myForm18.addEventListener("submit", handleFormSubmit);
+
+// Exo19
+let ul19 = document.getElementById("ul19");
+let btn19 = document.getElementById("btn19");
+btn19.addEventListener("click", () => {
+  let name19 = document.getElementById("name19").value;
+  let list19 = document.createElement("li");
+  list19.textContent = name19;
+  ul19.appendChild(list19);
+  document.getElementById("name19").value = "";
+});
+
+// Exo20
+// let array20 = ["pommes", "bananes", "oranges", "poires"];
+// let listdiv = document.getElementById("list20");
+// let ol20 = document.createElement("ol");
+// array20.forEach(function (element) {
+//   let li20 = document.createElement("li");
+//   li20.textContent = element;
+//   ol20.appendChild(li20);
 // });
-// }
-// let div15 = document.getElementById("div15");
-// let btn15 = document.getElementById("btn15");
-// let newParagraphe15;
+// listdiv.appendChild(ol20);
+let array20 = ["pommes", "bananes", "oranges", "poires"];
+let listDiv = document.getElementById("list2O");
+// Créer une liste ordonnée
+let ol20 = document.createElement("ol");
+// Parcourir le tableau et créer des éléments de liste pour chaque élément
+array20.forEach(function (element) {
+  let li20 = document.createElement("li");
+  li20.textContent = element;
+  ol20.appendChild(li20); // Ajouter l'élément de liste à la liste ordonnée
+});
+// Ajouter la liste ordonnée à l'élément <div> avec l'ID "list2O"
+listDiv.appendChild(ol20);
 
-// // Fonction pour gérer le clic sur le bouton
-// function handleClick() {
-//   // Si le paragraphe existe déjà
-//   if (newParagraphe15) {
-//     // Supprimer le paragraphe
-//     newParagraphe15.remove();
-//     // Réinitialiser newParagraphe15
-//     newParagraphe15 = null;
-//   } else {
-//     // Créer un nouveau paragraphe avec le texte "Bonjour"
-//     newParagraphe15 = document.createElement("p");
-//     newParagraphe15.textContent = "Bonjour";
-//     // Ajouter le paragraphe au div
-//     div15.appendChild(newParagraphe15);
-//   }
-// }
+// Exo21
+// Tableau de chaînes de caractères
+let elements = ["Chien", "Chat", "Oiseau", "Lapin"];
+// Sélectionner l'élément où la liste sera ajoutée
+let listeDiv = document.getElementById("liste");
+// Créer un élément de liste non ordonnée (ul)
+let listeNonOrdonnee = document.createElement("ul");
+// Parcourir le tableau et créer un élément de liste pour chaque élément
+elements.forEach(function (element) {
+  let listeElement = document.createElement("li");
+  listeElement.textContent = element;
+  listeNonOrdonnee.appendChild(listeElement);
+});
+// Ajouter la liste non ordonnée à l'élément de la page
+listeDiv.appendChild(listeNonOrdonnee);
 
-// // Ajouter un gestionnaire d'événements pour le clic sur le bouton
-// btn15.addEventListener("click", handleClick);
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((number) => console.log(number * 2));
