@@ -297,7 +297,3 @@ elements.forEach(function (element) {
 });
 // Ajouter la liste non ordonnée à l'élément de la page
 listeDiv.appendChild(listeNonOrdonnee);
-
-let numbers = [1, 2, 3, 4, 5];
-
-numbers.forEach((number) => console.log(number * 2));
