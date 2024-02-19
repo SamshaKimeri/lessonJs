@@ -34,8 +34,34 @@ let coloEx3 = document
   });
 
 // exo4
+let imgEx4 = document.getElementById("imgEx4");
 let btnEx4 = document.getElementById("btnEx4");
 btnEx4 = addEventListener("click", () => {
-  let url = document.getElementById("url").value;
-  // url.setAttribute("src",);
+  let urlEx4 = document.getElementById("urlEx4").value;
+  let newImgEx4 = document.createElement("img");
+  newImgEx4.src = urlEx4;
+  imgEx4.appendChild(newImgEx4);
+});
+
+// exo5
+let resultEx5 = document.getElementById("resultEx5");
+let btnEx5 = document.getElementById("btnEx5");
+btnEx5 = addEventListener("click", () => {
+  let numberEx5 = document.getElementById("numberEx5").value;
+  let modulo = numberEx5 % 5;
+
+  resultEx5.textContent = `Si l'on divise ${numberEx5} par 5, le reste est de ${modulo}`;
+});
+
+// exo6
+// function age() {
+//   let ageEnJour = numberEx6 * 365;
+//   return ageEnJour;
+// }
+let ageEx6 = document.getElementById("ageEx6");
+let btnEx6 = document.getElementById("btnEx6");
+btnEx6 = addEventListener("click", () => {
+  let numberEx6 = document.getElementById("numberEx6").value;
+  let ageEnJour = numberEx6 * 365;
+  ageEx6.textContent = `Vous avez vécu ${ageEnJour} jours`;
 });
