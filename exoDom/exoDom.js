@@ -56,7 +56,6 @@ btnEx5 = addEventListener("click", () => {
 // exo6
 // function age() {
 //   let ageEnJour = numberEx6 * 365;
-//   return ageEnJour;
 // }
 let ageEx6 = document.getElementById("ageEx6");
 let btnEx6 = document.getElementById("btnEx6");
@@ -64,4 +63,40 @@ btnEx6 = addEventListener("click", () => {
   let numberEx6 = document.getElementById("numberEx6").value;
   let ageEnJour = numberEx6 * 365;
   ageEx6.textContent = `Vous avez vécu ${ageEnJour} jours`;
+});
+
+// Exo7
+let jourReste7 = 0;
+// let ageEnJour7 = 0;
+// let ageEnJour77 = 0;
+function calculAgeEnJour7() {
+  let numberEx7 = document.getElementById("numberEx7").value;
+  let numberEx77 = document.getElementById("numberEx77").value;
+
+  if (numberEx77 < numberEx7) {
+    alert("Veuillez entrer un autre nombre");
+  } else {
+    let ageEnJour7 = numberEx7 * 365;
+    let ageEnJour77 = numberEx77 * 365;
+    jourReste7 = ageEnJour77 - ageEnJour7;
+  }
+  let ageEx7 = document.getElementById("ageEx7");
+  ageEx7.textContent = `Vous avez vécu ${ageEnJour7} jours.Il y a encore ${jourReste7} jours avant vos ${numberEx77} ans`;
+}
+let btnEx7 = document.getElementById("btnEx7");
+btnEx7.addEventListener("click", calculAgeEnJour7);
+
+// Exo8
+let btn8 = document.getElementById("btn8");
+let smiley8 = document.getElementById("smiley8");
+
+btn8.addEventListener("click", function () {
+  let confirme = confirm("Voulez-vous confirmer votre choix ?");
+  if (confirme) {
+    // alert("supprimé");
+    smiley8.innerHTML = `<img src="chatsouriant.png" >`;
+  } else {
+    // alert("ok");
+    smiley8.innerHTML = `<img src="chattriste.png" >`;
+  }
 });
