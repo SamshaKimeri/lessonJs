@@ -67,8 +67,8 @@ btnEx6 = addEventListener("click", () => {
 
 // Exo7
 let jourReste7 = 0;
-// let ageEnJour7 = 0;
-// let ageEnJour77 = 0;
+let ageEnJour7 = 0;
+let ageEnJour77 = 0;
 function calculAgeEnJour7() {
   let numberEx7 = document.getElementById("numberEx7").value;
   let numberEx77 = document.getElementById("numberEx77").value;
@@ -76,8 +76,8 @@ function calculAgeEnJour7() {
   if (numberEx77 < numberEx7) {
     alert("Veuillez entrer un autre nombre");
   } else {
-    let ageEnJour7 = numberEx7 * 365;
-    let ageEnJour77 = numberEx77 * 365;
+    ageEnJour7 = numberEx7 * 365;
+    ageEnJour77 = numberEx77 * 365;
     jourReste7 = ageEnJour77 - ageEnJour7;
   }
   let ageEx7 = document.getElementById("ageEx7");
@@ -99,4 +99,37 @@ btn8.addEventListener("click", function () {
     // alert("ok");
     smiley8.innerHTML = `<img src="chattriste.png" >`;
   }
+});
+
+// Exo9
+let ageEx9 = document.getElementById("ageEx9");
+let btnEx9 = document.getElementById("btnEx9");
+btnEx9.addEventListener("click", () => {
+  let numberEx9 = document.getElementById("numberEx9").value;
+  let votreNombre = "";
+
+  switch (numberEx9) {
+    case "0":
+      votreNombre = "zéro";
+      break;
+    case "1":
+      votreNombre = "un";
+      break;
+    case "2":
+      votreNombre = "deux";
+      break;
+    case "3":
+      votreNombre = "trois";
+      break;
+    case "4":
+      votreNombre = "quatre";
+      break;
+    case "5":
+      votreNombre = "cinq";
+      break;
+    default:
+      alert("Veuillez saisir un nombre valide");
+      break;
+  }
+  ageEx9.textContent = `${votreNombre} ${numberEx9}`;
 });
