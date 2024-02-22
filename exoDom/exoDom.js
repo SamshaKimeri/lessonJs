@@ -131,5 +131,30 @@ btnEx9.addEventListener("click", () => {
       alert("Veuillez saisir un nombre valide");
       break;
   }
-  ageEx9.textContent = `${votreNombre} ${numberEx9}`;
+  ageEx9.textContent = `Le nombre que vous avez choisit est :  ${votreNombre} `;
+});
+
+// Exo9 bis
+let btnValider = document.getElementById("valider9");
+let inputNombre = document.getElementById("nombre9");
+let divResultat = document.getElementById("resultat9");
+btnValider.addEventListener("click", () => {
+  let nombre9 = parseInt(inputNombre.value);
+  if (nombre9 >= 0 && nombre9 <= 5) {
+    let nombresEnLettres = ["zéro", "un", "deux", "trois", "quatre", "cinq"];
+    divResultat.textContent = `Vous avez choisi le nombre ${nombresEnLettres[nombre9]}`;
+  } else {
+    alert("Veuillez entrer un nombre entre 0 et 5");
+  }
+});
+
+// Exo10
+let ul10 = document.getElementById("ul10");
+let btnEx10 = document.getElementById("btnEx10");
+btnEx10.addEventListener("click", () => {
+  let textEx10 = document.getElementById("textEx10").value;
+  let list10 = document.createElement("li");
+  ul10.appendChild(list10);
+  list10.textContent = `${textEx10}`;
+  document.getElementById("textEx10").value = "";
 });
