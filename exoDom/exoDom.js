@@ -153,8 +153,26 @@ let ul10 = document.getElementById("ul10");
 let btnEx10 = document.getElementById("btnEx10");
 btnEx10.addEventListener("click", () => {
   let textEx10 = document.getElementById("textEx10").value;
-  let list10 = document.createElement("li");
-  ul10.appendChild(list10);
-  list10.textContent = `${textEx10}`;
-  document.getElementById("textEx10").value = "";
+  if (textEx10 !== "") {
+    let list10 = document.createElement("li");
+    list10.textContent = `${textEx10}`;
+    ul10.appendChild(list10);
+    document.getElementById("textEx10").value = "";
+  }
+});
+
+// Exo11
+
+let resultatEx11 = document.getElementById("resultatEx11");
+let btnEx11 = document.getElementById("btnEx11");
+btnEx11.addEventListener("click", () => {
+  let numberEx11 = document.getElementById("numberEx11").value;
+  let nombreAleatoire = Math.floor(Math.random() * 10) + 1;
+  if (nombreAleatoire < numberEx11) {
+    resultatEx11.textContent = "trop petit";
+  } else if (nombreAleatoire > numberEx11) {
+    resultatEx11.textContent = "trop grand";
+  } else {
+    resultatEx11.textContent = "gagné";
+  }
 });
