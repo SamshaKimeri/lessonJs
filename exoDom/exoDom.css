@@ -1,5 +1,46 @@
+body  {
+    text-align: center;
+}
 /* Exo2 */
 .visibleEx2{
     visibility: hidden;
     /* display: none; */
+}
+
+#window13{
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.9;
+    display: none;
+    position: absolute;
+}
+#exo13{
+    position: relative;
+}
+
+ul {
+    /* list-style: none; */
+    text-align: left;
+}
+
+button {
+    border-radius: 10px;
+    background-color: blueviolet;
+    border: none;
+    padding: 5px 10px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: rgb(167, 95, 233);
+}
+section{ 
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(217, 161, 198);
 }

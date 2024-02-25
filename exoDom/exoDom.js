@@ -54,15 +54,15 @@ btnEx5 = addEventListener("click", () => {
 });
 
 // exo6
-// function age() {
-//   let ageEnJour = numberEx6 * 365;
-// }
+function calculAgeEnJour(nombreEnAnnees) {
+  return nombreEnAnnees * 365;
+}
 let ageEx6 = document.getElementById("ageEx6");
 let btnEx6 = document.getElementById("btnEx6");
 btnEx6 = addEventListener("click", () => {
-  let numberEx6 = document.getElementById("numberEx6").value;
-  let ageEnJour = numberEx6 * 365;
-  ageEx6.textContent = `Vous avez vécu ${ageEnJour} jours`;
+  let nombreEnAnnees = document.getElementById("numberEx6").value;
+  let nombreEnJour = calculAgeEnJour(nombreEnAnnees);
+  ageEx6.textContent = `Vous avez vécu ${nombreEnJour} jours`;
 });
 
 // Exo7
@@ -161,18 +161,118 @@ btnEx10.addEventListener("click", () => {
   }
 });
 
-// Exo11
-
+// Exo11 et 12
+let essai = 0;
+let nombreAleatoire = Math.floor(Math.random() * 10) + 1;
 let resultatEx11 = document.getElementById("resultatEx11");
 let btnEx11 = document.getElementById("btnEx11");
 btnEx11.addEventListener("click", () => {
+  essai++;
+
+  console.log(essai);
   let numberEx11 = document.getElementById("numberEx11").value;
-  let nombreAleatoire = Math.floor(Math.random() * 10) + 1;
-  if (nombreAleatoire < numberEx11) {
+
+  console.log(nombreAleatoire);
+  if (nombreAleatoire > numberEx11) {
     resultatEx11.textContent = "trop petit";
-  } else if (nombreAleatoire > numberEx11) {
+  } else if (nombreAleatoire < numberEx11) {
     resultatEx11.textContent = "trop grand";
   } else {
     resultatEx11.textContent = "gagné";
+    essai = 0;
+    nombreAleatoire = Math.floor(Math.random() * 10) + 1;
+    document.getElementById("numberEx11").value = 0;
   }
+  if (essai === 3) {
+    alert("perdu");
+    console.log(essai);
+    console.log(nombreAleatoire);
+    essai = 0;
+    nombreAleatoire = Math.floor(Math.random() * 10) + 1;
+    document.getElementById("numberEx11").value = 0;
+  }
+});
+
+// exo13
+let btn13 = document.getElementById("btn13");
+let smiley13 = document.getElementById("smiley13");
+let window13 = document.getElementById("window13");
+
+btn13.addEventListener("click", () => {
+  window13.style.display = "block";
+});
+
+let window13BtnOk = document.getElementById("window13BtnOk");
+window13BtnOk.addEventListener("click", () => {
+  smiley13.innerHTML = `<img src="chatsouriant.png" >`;
+  window13.style.display = "none";
+});
+
+let window13BtnNok = document.getElementById("window13BtnNok");
+window13BtnNok.addEventListener("click", () => {
+  smiley13.innerHTML = `<img src="chattriste.png" >`;
+  window13.style.display = "none";
+});
+
+// Exo14
+let books = [
+  {
+    title: "CSS: The Definitive Guide",
+    author: "Eric Meyer",
+    image: "https://covers.oreillystatic.com/images/0636920012726/lrg.jpg",
+    type: "css",
+  },
+  {
+    title: "CSS Development with CSS3",
+    author: "Zachary Kingston",
+    image: "https://covers.oreillystatic.com/images/0636920057970/lrg.jpg",
+    type: "css",
+  },
+  {
+    title: "You Don't Know JS: Up & Going",
+    author: "Kyle Simpson",
+    image: "https://covers.oreillystatic.com/images/0636920039303/lrg.jpg",
+    type: "js",
+  },
+  {
+    title: "Programming JavaScript Applications",
+    author: "Eric Elliott",
+    image: "https://covers.oreillystatic.com/images/0636920033141/lrg.jpg",
+    type: "js",
+  },
+  {
+    title: "Modern JavaScript Develop and Design",
+    author: "Ullman Larry",
+    image:
+      "https://www.booktopia.com.au/http_coversbooktopiacomau/big/9780321812520/modern-javascript.jpg",
+    type: "js",
+  },
+];
+let listJs = document.getElementById("listJs");
+let btnJs = document.getElementById("btnJs");
+btnJs.addEventListener("click", () => {
+  let js = books.filter((type) => type.type === "js");
+  console.log(js);
+  let listeNonOrdonnee = document.createElement("ul");
+  js.forEach(function (type) {
+    let listeElement = document.createElement("li");
+    listeElement.textContent = type.title;
+    listeNonOrdonnee.appendChild(listeElement);
+  });
+  listJs.innerHTML = "";
+  listJs.appendChild(listeNonOrdonnee);
+});
+let listCss = document.getElementById("listCss");
+let btnCss = document.getElementById("btnCss");
+btnCss.addEventListener("click", () => {
+  let css = books.filter((type) => type.type === "css");
+  console.log(css);
+  let listeNonOrdonnee2 = document.createElement("ul");
+  css.forEach(function (type) {
+    let listeElement2 = document.createElement("li");
+    listeElement2.textContent = type.title;
+    listeNonOrdonnee2.appendChild(listeElement2);
+  });
+  listCss.innerHTML = "";
+  listCss.appendChild(listeNonOrdonnee2);
 });
