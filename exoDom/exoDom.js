@@ -168,10 +168,8 @@ let resultatEx11 = document.getElementById("resultatEx11");
 let btnEx11 = document.getElementById("btnEx11");
 btnEx11.addEventListener("click", () => {
   essai++;
-
   console.log(essai);
   let numberEx11 = document.getElementById("numberEx11").value;
-
   console.log(nombreAleatoire);
   if (nombreAleatoire > numberEx11) {
     resultatEx11.textContent = "trop petit";
