@@ -1,13 +1,18 @@
-let win = document.getElementById("win");
+llet win = document.getElementById("win");
 let score = document.getElementById("score");
-
-
+let scoreTotal = document.getElementById("scoreTotal");
 let scorePlayer = 0;
 let scoreComputer = 0;
-let total = 0;
+
+// let total = 0;
+if (scorePlayer >= 5) {
+  alert("Bravo ! Vous avez remporté la partie !");
+}
 
 let btnShi = document.getElementById("btnShi");
 btnShi.addEventListener("click", () => {
+  let name = document.getElementById("name").value;
+  scoreTotal.innerText = "Qui va gagner la partie ?";
   let aleatoire = Math.floor(Math.random() * 3) + 1;
   console.log(aleatoire);
   if (aleatoire === 1) {
@@ -15,7 +20,7 @@ btnShi.addEventListener("click", () => {
     win.textContent = "Nous sommes à égalité !";
   } else if (aleatoire === 2) {
     console.log("vous gagnez");
-    win.textContent = "Félicitation ! vous gagnez !";
+    win.textContent = `Félicitation ! ${name} vous gagnez !`;
     scorePlayer++;
   } else {
     console.log("elle gagne");
@@ -24,11 +29,15 @@ btnShi.addEventListener("click", () => {
   }
   console.log(`Votre score est de ${scorePlayer} sur 5`);
   console.log(`Mon score est de ${scoreComputer} sur 5`);
-  score.innerHTML = `Votre score est de ${scorePlayer} sur 5 <br>  Mon score est de ${scoreComputer} sur 5`;
+  score.innerHTML = `${name} Votre score est de ${scorePlayer} sur 5 <br>  Mon score est de ${scoreComputer} sur 5`;
+  victory();
+  reset();
 });
 
 let btnFu = document.getElementById("btnFu");
 btnFu.addEventListener("click", () => {
+  let name = document.getElementById("name").value;
+  scoreTotal.innerText = "Qui va gagner la partie ?";
   let aleatoire = Math.floor(Math.random() * 3) + 1;
   console.log(aleatoire);
   if (aleatoire === 1) {
@@ -45,11 +54,15 @@ btnFu.addEventListener("click", () => {
   }
   console.log(`Votre score est de ${scorePlayer} sur 5`);
   console.log(`Mon score est de ${scoreComputer} sur 5`);
-  score.innerHTML = `Votre score est de ${scorePlayer} sur 5 <br>  Mon score est de ${scoreComputer} sur 5`;
+  score.innerHTML = `${name} Votre score est de ${scorePlayer} sur 5 <br>  Mon score est de ${scoreComputer} sur 5`;
+  victory();
+  reset();
 });
 
 let btnMi = document.getElementById("btnMi");
 btnMi.addEventListener("click", () => {
+  let name = document.getElementById("name").value;
+  scoreTotal.innerText = "Qui va gagner la partie ?";
   let aleatoire = Math.floor(Math.random() * 3) + 1;
   console.log(aleatoire);
   if (aleatoire === 1) {
@@ -66,15 +79,41 @@ btnMi.addEventListener("click", () => {
   }
   console.log(`Votre score est de ${scorePlayer} sur 5`);
   console.log(`Mon score est de ${scoreComputer} sur 5`);
-  score.innerHTML = `Votre score est de ${scorePlayer} sur 5 <br>  Mon score est de ${scoreComputer} sur 5`;
-});
-if (scoreComputer === 5 || scorePlayer === 5) {
-  document.getElementById("score") = 0;
-}
-scoreComputer = 0;
-scorePlayer = 0;
-win.textContent = "";
 
+  score.innerHTML = `${name} Votre score est de ${scorePlayer} sur 5 <br>  Mon score est de ${scoreComputer} sur 5`;
+  victory();
+  reset();
+});
+
+console.log(`score player : ${scorePlayer}`);
+
+function victory() {
+  if (scorePlayer === 5) {
+    scoreTotal.innerText = "Bravo, vous avez gagné la manche !";
+  } else if (scoreComputer === 5) {
+    let name = document.getElementById("name").value;
+    scoreTotal.innerText = `Désolé, ${name} cette fois-ci je gagne ! ("`;
+  }
+}
+
+function reset() {
+  if (scorePlayer === 5 || scoreComputer === 5) {
+    scorePlayer = 0;
+    scoreComputer = 0;
+    // scoreTotal.innerText = "Qui va gagner la partie ?";
+  }
+}
+
+// if (scoreComputer === 5 || scorePlayer === 5) {
+//   if (scorePlayer === 5) {
+//     scoreTotal.textContent = "Bravo ! Vous avez remporté la partie !";
+//   } else {
+//     scoreTotal.textContent = "Je gagne la partie, désolée !";
+//   }
+// }
+// scoreComputer = 0;
+// scorePlayer = 0;
+// win.textContent = "";
 
 // while (scorePlayer < 5) {
 //   scorePlayer++;
@@ -94,4 +133,3 @@ win.textContent = "";
 
 // let options = ["Pierre", "Papier", "Ciseaux"];
 // const choixAleatoire = options[Math.floor(Math.random() * options.length)];
-// console.log(choixAleatoire);
