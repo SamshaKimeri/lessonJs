@@ -1,4 +1,4 @@
-llet win = document.getElementById("win");
+let win = document.getElementById("win");
 let score = document.getElementById("score");
 let scoreTotal = document.getElementById("scoreTotal");
 let scorePlayer = 0;
@@ -133,3 +133,64 @@ function reset() {
 
 // let options = ["Pierre", "Papier", "Ciseaux"];
 // const choixAleatoire = options[Math.floor(Math.random() * options.length)];
+let win = document.getElementById("win");
+let score = document.getElementById("score");
+let scoreTotal = document.getElementById("scoreTotal");
+let scorePlayer = 0;
+let scoreComputer = 0;
+
+let btnShi = document.getElementById("btnShi");
+let btnFu = document.getElementById("btnFu");
+let btnMi = document.getElementById("btnMi");
+
+btnShi.addEventListener("click", () => {
+  playGame(1);
+});
+
+btnFu.addEventListener("click", () => {
+  playGame(2);
+});
+
+btnMi.addEventListener("click", () => {
+  playGame(3);
+});
+
+function playGame(playerChoice) {
+  let options = ["Shi", "Fu", "Mi"];
+  let computerChoice = Math.floor(Math.random() * 3);
+  let result = compareChoices(playerChoice, computerChoice);
+
+  if (result === "Win") {
+    scorePlayer++;
+  } else if (result === "Lose") {
+    scoreComputer++;
+  }
+
+  score.textContent = `${options[playerChoice]} vs ${options[computerChoice]}`;
+  win.textContent = result;
+
+  if (scorePlayer === 5 || scoreComputer === 5) {
+    if (scorePlayer === 5) {
+      scoreTotal.textContent = "Bravo ! Vous avez remporté la partie !";
+    } else {
+      scoreTotal.textContent = "Je gagne la partie, désolée !";
+    }
+
+    scorePlayer = 0;
+    scoreComputer = 0;
+  }
+}
+
+function compareChoices(playerChoice, computerChoice) {
+  if (playerChoice === computerChoice) {
+    return "Tie";
+  } else if (
+    (playerChoice === 0 && computerChoice === 1) ||
+    (playerChoice === 1 && computerChoice === 2) ||
+    (playerChoice === 2 && computerChoice === 0)
+  ) {
+    return "Win";
+  } else {
+    return "Lose";
+  }
+}
