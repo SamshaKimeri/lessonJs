@@ -86,6 +86,7 @@ function lancerJeu() {
   let score = 0;
   // let nbMotsProposes = 0;
   let i = 0;
+  let listeProposition = listeMots;
 
   // if (choix === "mots") {
   //   score = lancerBoucleDeJeu(listeMots);
@@ -97,21 +98,29 @@ function lancerJeu() {
 
   let btnValiderMot = document.getElementById("btnValiderMot");
   let inputEcriture = document.getElementById("inputEcriture");
-  afficherPropsition(listeMots[i]);
+  afficherPropsition(listeProposition[i]);
   btnValiderMot.addEventListener("click", () => {
     console.log(inputEcriture.value);
-    if (inputEcriture.value === listeMots[i]) {
+    if (inputEcriture.value === listeProposition[i]) {
       score++;
     }
     i++;
     afficherResultat(score, i);
     inputEcriture.value = "";
-    if (listeMots[i] === undefined) {
+    if (listeProposition[i] === undefined) {
       afficherPropsition("Le jeu est fini");
       btnValiderMot.ariaDisabled = true;
     } else {
-      afficherPropsition(listeMots[i]);
+      afficherPropsition(listeProposition[i]);
     }
   });
+
+  let listeBtnRadio = document.querySelectorAll(".optionSource input");
+  for (let index = 0; index < listeBtnRadio.length; index++) {
+    listeBtnRadio[index].addEventListener("change", (event) => {
+      console.log(event.target.value);
+    });
+  }
+
   afficherResultat(score, i);
 }

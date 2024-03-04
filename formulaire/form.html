@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="form.js" defer></script>
+    <title>Les formulaires</title>
+</head>
+<body>
+    <h1>Les formulaires</h1>
+    <p>Les cases à cocher</p>
+    <input type="checkbox" id="accepter" name="accepter">
+    <p>Les boutons radio</p>
+    <label>préférence de couleur :</label>
+    <input type="radio" id="red" name="couleur" value="red" checked>
+    <label for="red">Rouge</label>
+    <input type="radio" id="blue" name="bcouleur" value="blue">
+    <label for="blue">Bleu</label>
+    <input type="radio" id="green" name="grcouleur" value="green">
+    <label for="green">Vert</label>  
+    <h3>Exemple</h3>
+    <form>
+        <!-- champ nom avec input text -->
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" value="David">
+
+        <!-- champ conditions avec checkbox -->
+        <label for="conditions">Acceptez vous les conditions :</label>
+        <input type="checkbox" id="conditions" name="conditions" checked>
+
+        <!-- champ residence avec bouton radio : france, UE, hors UE -->
+        <label for="residence">Résidence</label>
+        <input type="radio" id="france" name="residence" value="france" checked>
+        <label for="france">France</label>
+        <input type="radio" id="ue" name="residence" value="ue">
+        <label for="ue">UE</label>
+        <input type="radio" id="hors-eu" name="residence" value="hors-eu">
+        <label for="hors-eu">hors Europe</label>
+    </form>
+</body>
+</html>
