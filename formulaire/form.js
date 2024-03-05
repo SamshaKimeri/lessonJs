@@ -30,3 +30,28 @@ for (let i = 0; i < listeBtnRadio.length; i++) {
 nom.addEventListener("change", () => {
   console.log(nom.value);
 });
+
+// Exercice1
+document.addEventListener("DOMContentLoaded", () => {
+  const temperatureInput = document.getElementById("temperature");
+  const celsusRadio = document.querySelector('input[value="celsus"]');
+  const fahrenheitRadio = document.querySelector('input[value="fahrenheit"]');
+  const resultDiv = document.getElementById("result1");
+
+  function convertTemperature() {
+    const temperature = parseFloat(temperatureInput.value);
+    if (celsusRadio.checked) {
+      const fahrenheit = (temperature * 9) / 5 + 32;
+      resultDiv.textContent = `${temperature} Celsius équivaut à ${fahrenheit.toFixed(
+        2
+      )} fahreneit`;
+    } else {
+      const celsuis = ((temperature - 32) * 5) / 9;
+      resultDiv.textContent = `${temperature} fahrenheit équivaut à ${celsuis.toFixed(
+        2
+      )} celsuis`;
+    }
+  }
+  celsusRadio.addEventListener("change", convertTemperature);
+  fahrenheitRadio.addEventListener("change", convertTemperature);
+});

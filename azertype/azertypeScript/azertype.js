@@ -119,6 +119,12 @@ function lancerJeu() {
   for (let index = 0; index < listeBtnRadio.length; index++) {
     listeBtnRadio[index].addEventListener("change", (event) => {
       console.log(event.target.value);
+      if (event.target.value === "1") {
+        listeProposition = listeMots;
+      } else {
+        listeProposition = listePhrases;
+      }
+      afficherPropsition(listeProposition[i]);
     });
   }
 
