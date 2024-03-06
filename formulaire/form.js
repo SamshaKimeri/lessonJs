@@ -55,3 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
   celsusRadio.addEventListener("change", convertTemperature);
   fahrenheitRadio.addEventListener("change", convertTemperature);
 });
+
+// exercice 2
+function calculerPourcentage() {
+  let valeurTotale = document.getElementById("valeurTotale").value;
+  let pourcentage = document.getElementById("pourcentage").value;
+  let resultat2 = document.getElementById("resultat2");
+  let resultat = (valeurTotale * pourcentage) / 100;
+  resultat2.textContent = `le total est : ${resultat}`;
+}
+valeurTotale.addEventListener("change", calculerPourcentage);
+pourcentage.addEventListener("change", calculerPourcentage);
