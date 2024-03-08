@@ -66,3 +66,20 @@ function calculerPourcentage() {
 }
 valeurTotale.addEventListener("change", calculerPourcentage);
 pourcentage.addEventListener("change", calculerPourcentage);
+
+// exercice 3
+document.addEventListener("DOMContentLoaded", () => {
+  let unitPrice = document.getElementById("unitPrice");
+  let quantity = document.getElementById("quantity");
+  let totalPrice = document.getElementById("totalPrice");
+
+  function calculate() {
+    let unitPriceValue = parseFloat(unitPrice.value);
+    let quantityValue = parseFloat(quantity.value);
+
+    let totalPrice2 = unitPriceValue * quantityValue;
+    totalPrice.textContent = `Le prix total est de ${totalPrice2} €`;
+  }
+  unitPrice.addEventListener("change", calculate);
+  quantity.addEventListener("change", calculate);
+});
